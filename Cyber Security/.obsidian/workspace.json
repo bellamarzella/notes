@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/metasploit.md",
+                "file": "tools/gobuster.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "metasploit"
+              "title": "gobuster"
             }
           }
         ],
@@ -314,13 +314,13 @@
   },
   "active": "abcdcedeb0ed7d19",
   "lastOpenFiles": [
+    "tools/metasploit.md",
     "tools/nmap.md",
     "tools/netcat.md",
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
     "concepts/web-enumeration.md",
     "concepts/http-codes.md",
-    "tools/metasploit.md",
     "concepts/shells.md",
     "tools/gobuster.md",
     "tools/ftp.md",
