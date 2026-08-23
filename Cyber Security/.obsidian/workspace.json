@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/nmap.md",
+                "file": "tools/metasploit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nmap"
+              "title": "metasploit"
             }
           }
         ],
@@ -314,6 +314,7 @@
   },
   "active": "abcdcedeb0ed7d19",
   "lastOpenFiles": [
+    "tools/nmap.md",
     "tools/netcat.md",
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
@@ -322,7 +323,6 @@
     "tools/metasploit.md",
     "concepts/shells.md",
     "tools/gobuster.md",
-    "tools/nmap.md",
     "tools/ftp.md",
     "admin.md",
     "tools/smb.md",
