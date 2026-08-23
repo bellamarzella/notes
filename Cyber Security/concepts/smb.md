@@ -1,0 +1,2 @@
+`smb` is the protocol user for sharing files, printers and systems communications between machines (usually windows) within a network.
+By default, it runs on **Port 445**. It allows machines to talk to eachother and share access to folders, which are called **SMB shares**. 

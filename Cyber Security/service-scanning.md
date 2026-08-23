@@ -1,1 +1,0 @@
-In order to begin exploring a machine, we need to identify the operating system and any services running on it. We're especially interested in services that have been mi

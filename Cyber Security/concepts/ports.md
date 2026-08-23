@@ -3,7 +3,7 @@ A port is like a window or door on a building, if the building is a remote syste
 
 Ports are virtual points where network connections begin and end. They are software-based and managed by the OS. Each port is associated with a specific process or service and allow machines to differentiate between different traffic types (for example, `SSH` traffic flows to a different port than web requests even though they both use the same connection.)
 
-Each port is assigned a number, and many are standardised. For example, `HTTP` messages go through port `80`, unless configured otherwise. 
+Each port is assigned a number, and many are standardised. For example, `HTTP` messages go through port `80`, unless configured otherwise. Port 0 is reserved for TCP/IP networking. If anything attempts to bind to port 0, it is instead bound to the next available port above 1,024. Thus, 0 is treated as a *wildcard* port.
 ## Two types of Ports
 ### Transmission Control Protocol (TCP)
 `TCP` is connection-oriented, meaning a connection between client and server must be established before data can be sent. The server must remain in a listening state to wait for connections from clients.
