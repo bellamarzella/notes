@@ -55,12 +55,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "admin.md",
+                "file": "concepts/web-enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "admin"
+              "title": "web-enumeration"
+            }
+          },
+          {
+            "id": "eb74da46501f9351",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/public-exploits.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "public-exploits"
+            }
+          },
+          {
+            "id": "384adf7e3a0bdc63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tools/gobuster.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "gobuster"
+            }
+          },
+          {
+            "id": "16f2d58e563d3bcd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "http-codes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "http-codes"
             }
           },
           {
@@ -78,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -256,18 +298,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fbd3b0a947b093b2",
+  "active": "16f2d58e563d3bcd",
   "lastOpenFiles": [
+    "tools/gobuster.md",
+    "http-codes.md",
+    "tools/metasploit.md",
+    "tools/nmap.md",
+    "tools/netcat.md",
+    "tools/ftp.md",
+    "concepts/public-exploits.md",
     "concepts/web-enumeration.md",
     "admin.md",
-    "tools/gobuster.md",
     "concepts/service-scanning.md",
     "tools/smb.md",
     "concepts/ports.md",
-    "tools/ftp.md",
-    "tools/netcat.md",
     "concepts/shells.md",
-    "tools/nmap.md",
     "concepts/owasp-top-10.md",
     "tools/openvpn.md",
     "tools/vim.md",
