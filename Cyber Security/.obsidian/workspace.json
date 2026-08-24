@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/sudo.md",
+                "file": "concepts/privilege-escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sudo"
+              "title": "privilege-escalation"
             }
           }
         ],
@@ -230,6 +230,7 @@
   },
   "active": "14dadd0b83c87642",
   "lastOpenFiles": [
+    "tools/sudo.md",
     "tools/tmux.md",
     "tools/vim.md",
     "tools/netcat.md",
@@ -237,7 +238,6 @@
     "tools/openvpn.md",
     "tools/smb.md",
     "tools/ssh.md",
-    "tools/sudo.md",
     "concepts/web-enumeration.md",
     "admin.md",
     "concepts/privilege-escalation.md",

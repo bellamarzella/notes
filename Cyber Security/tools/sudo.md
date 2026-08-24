@@ -41,7 +41,7 @@ $ sudo -u user /bin/echo Hello World!
 
 ## Flags
 
-| Flag      | Description                                                                                  |
-| --------- | -------------------------------------------------------------------------------------------- |
-| -l        | List allowed and forbidden commands for the invoking user, or user specified by `-U` option. |
-| -u [user] | Run the command as the target *`user` rather than the default target (usually `root`)        |
+| Flag        | Description                                                                                  |
+| ----------- | -------------------------------------------------------------------------------------------- |
+| `-l`        | List allowed and forbidden commands for the invoking user, or user specified by `-U` option. |
+| `-u [user]` | Run the command as the target `user` rather than the default target (usually `root`)         |
