@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/netcat.md",
+                "file": "concepts/shells.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "netcat"
+              "title": "shells"
             }
           }
         ]
@@ -201,9 +201,9 @@
   },
   "active": "75d04f63323ddbe9",
   "lastOpenFiles": [
-    "concepts/shells.md",
-    "tools/netcat.md",
     "concepts/web-enumeration.md",
+    "tools/netcat.md",
+    "concepts/shells.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
     "tools/nmap.md",

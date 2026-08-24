@@ -12,9 +12,9 @@ SSH-2.0-OpenSSH_8.4p1 Debian-3
 
 ### Flags
 
-| Flag     | Description                                                                                          |
-| -------- | ---------------------------------------------------------------------------------------------------- |
-| -l       | Listen mode. Wait for a connection to connect to us.                                                 |
-| -v       | Verbose mode. Tell us as things that happen in real-time, for example, when we receive a connection. |
-| -n       | Disable DNS resolution and connect only from/to IPs, speeds up the connection.                       |
-| -\[port] |                                                                                                      |
+| Flag       | Description                                                                                          |
+| ---------- | ---------------------------------------------------------------------------------------------------- |
+| -l         | Listen mode. Wait for a connection to connect to us.                                                 |
+| -v         | Verbose mode. Tell us as things that happen in real-time, for example, when we receive a connection. |
+| -n         | Disable DNS resolution and connect only from/to IPs, speeds up the connection.                       |
+| -p \[port] | Port number `netcat` is listening on.                                                                |
