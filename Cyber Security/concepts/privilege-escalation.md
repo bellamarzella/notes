@@ -78,4 +78,15 @@ We can look for files we can read and see if they contain any exposed credential
 /var/www/html/config.php: $conn = new mysqli(localhost, 'db_user', 'password123');
 ```
 
-As we can see, the database password is exposed, which would allow us to log into the local mysql database and continue looking for anything interesting. We might also check for ``
+As we can see, the database password is exposed, which would allow us to log into the local mysql database and continue looking for anything interesting. We might also check for **password reuse**, as the user might've used the same password somewhere else:
+
+```shell
+$ su -
+Password: password123
+
+whoami
+root
+```
+
+### SSH Keys
+If we have read access over the `.ssh` directory for a 
