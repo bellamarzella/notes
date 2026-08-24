@@ -29,5 +29,7 @@ The above commands, however, require a password. There are certain occasions in 
 
 ```bash
 $ sudo -l
-
+	(user : user) NOPASSWD: /bin/echo
 ```
+
+The `NOPASSWD` entry shows that `/bin/echo` can be executed with `sudo` without a password!
