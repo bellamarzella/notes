@@ -11,10 +11,14 @@
             "id": "da4c77c44cf899c3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "admin.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "admin"
             }
           }
         ]
@@ -197,6 +201,8 @@
   },
   "active": "da4c77c44cf899c3",
   "lastOpenFiles": [
+    "concepts/web-enumeration.md",
+    "concepts/http-codes.md",
     "concepts/shells.md",
     "concepts/privilege-escalation.md",
     "concepts/transferring-files.md",
@@ -208,13 +214,11 @@
     "tools/openvpn.md",
     "tools/smb.md",
     "tools/ssh.md",
-    "concepts/web-enumeration.md",
     "admin.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
-    "concepts/http-codes.md",
     "tools/ftp.md",
     "concepts/ports.md",
     "concepts/owasp-top-10.md",
