@@ -117,4 +117,17 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-This gives us `key`, the private key we use `ssh -i` to log in with, and `key.pub`, the public key we'll place in `/root/.ssh/authorized_keys`
+This gives us `key`, the private key we use `ssh -i` to log in with, and `key.pub`, the public key we'll place in `/root/.ssh/authorized_keys`:
+
+```bash
+user@remotehost$ echo "ssh-rsa AAAAB...SNIP...M= user@parrot" >> /root/.ssh/authorized_keys
+```
+
+Now, the remote server should allow us to log in as that user by using our private key:
+
+```bash
+$ ssh root@10.10.10.10 -i key  
+
+root@remotehost#
+```
+
