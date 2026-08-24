@@ -45,4 +45,8 @@ We should also look at installed software, for example with `dpkg -l` on Linux o
 ### User Privileges
 Another critical aspect to look at are the privileges available to the user we have access to. We might have the ability to run specific commands as root or as another user, which we might be able to leverage to escalate or privileges, or gain access as another user.
 
-Some common ways to exploit user priv
+Some common ways to exploit user privileges are:
+1. Sudo
+2. SUID
+3. Windows Token Privileges
+
