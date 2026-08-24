@@ -4,7 +4,8 @@ There are three types of shells:
 ## Reverse Shell
 #### Description
 An attack where the victim computer initiates the network connection back to the attacker’s machine, handing over its command line terminal.
-Reverse shells are handy 
+
+Reverse shells are handy when we want a quick, reliable connection to our compromised victim, but can be very fragile. Once it is stopped, or if we lose our connection, we have to re-use the exploit to execute the reverse shell again and regain access.
 ### How it works
 1. The attacker starts a listener program (like Netcat) on their machine and waits.
 2. The attacker uses an exploit (RCE) to make the victim run a network command.
