@@ -89,4 +89,4 @@ root
 ```
 
 ### SSH Keys
-If we have read access over the `.ssh` directory for a 
+If we have read access over the `.ssh` directory for a specific user, we may be able to read their private ssh keys found in `/home/user/.ssh/id_rsa` or `/root/.ssh/id_rsa`, which we can use to log in to the server as them. 
