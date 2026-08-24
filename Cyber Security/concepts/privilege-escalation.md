@@ -107,5 +107,14 @@ If we find ourselves with the right to `write` to the `.ssh` directory, then we 
 $ ssh-keygen -f key 
 Generating public/private rsa key pair. Enter passphrase (empty for no passphrase): ******* 
 Enter same passphrase again: ******* 
-Your identification has been saved in key Your public key has been saved in key.pub The key fingerprint is: SHA256:...SNIP... user@parrot The key's randomart image is: +---[RSA 3072]----+ | ..o.++.+ | ...SNIP... | . ..oo+. | +----[SHA256]-----+
+Your identification has been saved in key Your public key has been saved in key.pub 
+The key fingerprint is: SHA256:...SNIP... user@parrot 
+The key's randomart image is: 
++---[RSA 3072]----+ 
+| ..o.++.+ | 
+...SNIP... 
+| . ..oo+. | 
++----[SHA256]-----+
 ```
+
+This gives us a `key` and a 
