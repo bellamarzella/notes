@@ -183,7 +183,7 @@ Now we should have a `netcat` shell with the terminal's full features.
 ### Description
 A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request parameters, executes commands and prints the output back to the webpage. Functionally, its very similar to command injection, just that we've leveraged an exploit such that we no longer need to inject the command.
 
-
+A benefit of the webshell is that it bypasses firewalls, as it doesn't open a new connection but instead runs on the `HTTP` or `HTTPS` ports
 
 ### Process
 #### Step 1: Writing our Web Shell
