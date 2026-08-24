@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/privilege-escalation.md",
+                "file": "tools/sudo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "privilege-escalation"
+              "title": "sudo"
             }
           }
         ],
@@ -230,6 +230,7 @@
   },
   "active": "14dadd0b83c87642",
   "lastOpenFiles": [
+    "concepts/privilege-escalation.md",
     "tools/sudo.md",
     "tools/tmux.md",
     "tools/vim.md",
@@ -240,7 +241,6 @@
     "tools/ssh.md",
     "concepts/web-enumeration.md",
     "admin.md",
-    "concepts/privilege-escalation.md",
     "concepts/shells.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
