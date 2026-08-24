@@ -6,5 +6,8 @@ This is generally done as some useful commands, such as `tcpdump`, can only be r
 ```bash
 $ sudo -l
 
-
+[sudo] password for user1:
+...SNIP...
+User user1 may run the following commands on ExampleServer: 
+	(ALL : ALL) ALL
 ```
