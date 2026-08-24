@@ -32,7 +32,7 @@ group default qlen 500
 	inet 10.10.10.10/23 scope global tun0 
 ...SNIP...
 ```
-> We are connecting to the IP in 'tun0' because we can only connect to HTB boxes 
+> We are connecting to the IP in `tun0` because we can only connect to HTB boxes through the VPN connection, as they do not have internet access. In a real scenario, we may directly connect through `eth0`.
 
 ---
 ## Bind Shell
