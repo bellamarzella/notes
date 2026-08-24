@@ -20,5 +20,14 @@ We can see that we're allowed to run all commands with `sudo`, so we can use `su
 ```bash
 $ sudo su -
 
-[sudo] password for user1: whoami root
+[sudo] password for user1: 
+$ whoami 
+root
+```
+
+The above commands, however, require a password. There are certain occasions in which we can execute commands or applications without a password:
+
+```bash
+$ sudo -l
+
 ```
