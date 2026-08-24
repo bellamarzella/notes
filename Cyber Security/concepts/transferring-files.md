@@ -62,5 +62,13 @@ shell: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, n
 
 We can see that running `file` on `shell` reveals it is an `ELF Binary`, meaning it was successfully transferred.
 
-To verify that the file wasn't changed during transfer, compare their hashes, for we can run `md5sum` on the original and copy:
+To verify that the file wasn't changed during transfer, we can hash the original and the copy and make sure the results match:
+
+```bash
+$ md5sum shell
+321de1d7e7c3735838890a72c9ae7d1d shell
+
+user@remote$ md5sum shell
+321de1d7e7c3735838890a72c9ae7d1d shell
+```
 
