@@ -204,7 +204,10 @@ Once we've written the shell, we need to place it in the victim's web directory 
 
 However, if we only have RCE through an exploit, we can write our shell directly to the webroot to access it over the web. So, our first step is to identify where the webroot is. The following are some common default webroot paths:
 
-
-|     |     |
-| --- | --- |
-|     |     |
+| Web Server | Default Webroot        |
+| ---------- | ---------------------- |
+| `Apache`   | /var/www/html/         |
+| `Nginx`    | /usr/local/nginx/html/ |
+| `IIS`      | c:\inetpub\wwwroot\    |
+| `XAMPP`    | C:\xampp\htdocs\       |
+We can check these directories to see which webroot is in use and then use `e`
