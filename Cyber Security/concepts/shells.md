@@ -4,6 +4,7 @@ There are three types of shells:
 ## Reverse Shell
 #### Description
 An attack where the victim computer initiates the network connection back to the attacker’s machine, handing over its command line terminal.
+Reverse shells are handy 
 ### How it works
 1. The attacker starts a listener program (like Netcat) on their machine and waits.
 2. The attacker uses an exploit (RCE) to make the victim run a network command.
@@ -65,7 +66,7 @@ id # Input
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-Once we received our
+Once we receive our connection, we're able to type a command (in this case `id`) and get its output back, all on our machine.
 
 ---
 ## Bind Shell
