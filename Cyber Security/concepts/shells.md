@@ -143,4 +143,18 @@ There are multiple methods, but for now we'll look at the `python/stty` method. 
 $ python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
-After running that, hitting `ctrl+z` sends our shell to the background and takes us back to our local terminal where we input the follow
+After running that, hitting `ctrl+z` sends our shell to the background and takes us back to our local terminal where we input the following `stty` command:
+
+```bash
+www-data@remotehost$ ^Z 
+
+[1] Stopped nc -lvnp 1234 
+user@htb[/htb]$ stty raw -echo 
+user@htb[/htb]$ fg 
+
+[Enter] 
+[Enter] 
+www-data@remotehost$
+```
+
+Entering `fg` brings our 
