@@ -180,3 +180,5 @@ www-data@remotehost$ stty rows 67 columns 318
 Now we should have a `netcat` shell with the terminal's full features.
 
 ## Web Shell
+### Description
+A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request parameters, executes commands and prints the output back to the webpage.
