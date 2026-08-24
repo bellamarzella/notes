@@ -200,6 +200,11 @@ We need to write a web shell that takes our command through a `GET` request, exe
 ```
 
 #### Step 2: Uploading our Web Shell
-Once we've written the shell, we need to place it in the victim's web directory to execute the script via the webs browser. This can be done through a vulnerability in an upload feature.
+Once we've written the shell, we need to place it in the victim's web directory (webroot) to execute the script via the web browser. This can be done through a vulnerability in an upload feature.
 
-However, if we only have RCE through an exploit, we can write our shell directly to the webroot
+However, if we only have RCE through an exploit, we can write our shell directly to the webroot to access it over the web. So, our first step is to identify where the webroot is. The following are some common default webroot paths:
+
+
+|     |     |
+| --- | --- |
+|     |     |
