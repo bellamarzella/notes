@@ -13,6 +13,7 @@ An attack where the victim computer initiates the network connection back to the
 	1. Security systems are set up to strictly block random connections trying to get *in* from the internet. However, they are lax about letting internal computers connect *out* (like loading a website or checking updates).
 2. **The "Established" rule loophole.**
 	1. Because the victim started the call from the inside, the firewall approves the connection and opens up a two-way highway for that conversation. The attacker can now slide any command they want back down that approved highway.
+### Setting Up
 ---
 ## Bind Shell
 ### Description
