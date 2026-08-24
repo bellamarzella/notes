@@ -32,4 +32,4 @@ $ sudo -l
 	(user : user) NOPASSWD: /bin/echo
 ```
 
-The `NOPASSWD` entry shows that `/bin/echo` can be executed with `sudo` without a password!
+The `NOPASSWD` entry shows that `/bin/echo` can be executed with `sudo` without a password, which could be useful if we gained entry without the user's password, as it could let us find it out. As it says `user`, we can run `sudo` as that user instead of r
