@@ -71,7 +71,7 @@ Once we receive our connection, we're able to type a command (in this case `id`)
 ### Description
 The opposite of a `reverse` shell. The victim is forced to open a new port on itself and attach its terminal directly to that port, which the attacker then connects to.
 
-Unlike a `reverse` shell however, if we drop connection for any reason, we can just reconnect. On the other hand, if the 
+Unlike a `reverse` shell however, if we drop connection for any reason, we can just reconnect. On the other hand, if the bind shell command is stopped, or the remote host rebooted, we still lose access and would have to exploit it again to reconnect.
 ### How it works
 1. The attacker uses an exploit to force the victim to run a background listener.
 2. The victim binds its terminal to that listener port.
@@ -121,7 +121,8 @@ We're immediately dropped into a bash session and can interact with the target d
 ## TTY Upgrade
 ### Description
 An optimisation process used immediately after catching a raw shell to convert a fragile, dumb connection into a stable terminal.
-TTY differ from a regular shell in that it behaves like a terminal. The other shells are essentially hacky ways to get the functionality of a terminal, whereas a TTY *is* a terminal.
+
+Once we connect through `netcat`, we'll notice that we can only type or
 ### How it works
 1. When you first catch a shell via Netcat, it is just a dumb text pipe. It lacks keyboard features and system variables.
 2. The attacker runs a sequence of scripts on the victim (like Python) to force the OS to generate a real pseudo-terminal interface.
