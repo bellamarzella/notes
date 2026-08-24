@@ -43,4 +43,6 @@ We should keep in mind kernel exploits can cause system instability and thus we 
 We should also look at installed software, for example with `dpkg -l` on Linux or by looking in `C:\Program Files` on Windows. Again, there could be public exploits for software in use, especially if any are out of date.
 
 ### User Privileges
-Another critical aspect to look at are the privileges available to the user we have access to. We might have the ability to run specific commands as root, 
+Another critical aspect to look at are the privileges available to the user we have access to. We might have the ability to run specific commands as root or as another user, which we might be able to leverage to escalate or privileges, or gain access as another user.
+
+Some common ways to exploit user priv
