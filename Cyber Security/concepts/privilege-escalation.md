@@ -101,4 +101,4 @@ root@10.10.10.10#
 
 > Note that we used the command 'chmod 600 id_rsa' on the key after we created it on our machine to change the file's permissions to be more restrictive. If ssh keys have lax permissions, i.e., maybe read by other people, the ssh server would prevent them from working.
 
-If we find ourselves with the right to `write` to the `.ssh` directory, then we can place *our* public key in the `/home/user//s`
+If we find ourselves with the right to `write` to the `.ssh` directory, then we can place *our* public key in the `/home/user/.ssh/autorized_keys` directory. The current SSH configuration will not accept keys written by other users, so we must have gained a shell as that user. We must first 
