@@ -35,4 +35,6 @@ Once the script runs, it collects information and displays it in an easy to pars
 ### Kernel Exploits
 If we encounter a server running an old operating system, we should begin by looking for potential kernel vulnerabilities, as it is likely vulnerable to now patched exploits.
 
-For example, the above script showed us the Linux version is `3.9.0-73-generic`. Searching for [[public-exploits]], we might find ``
+For example, the above script showed us the Linux version is `3.9.0-73-generic`. Searching for [[public-exploits]], we might find `CVE-2016-5195`, AKA [DirtyCow](https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs), which would give us root access.
+
+We should keep in mind kernel exploits can cause system instability 
