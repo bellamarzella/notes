@@ -101,4 +101,11 @@ root@10.10.10.10#
 
 > Note that we used the command 'chmod 600 id_rsa' on the key after we created it on our machine to change the file's permissions to be more restrictive. If ssh keys have lax permissions, i.e., maybe read by other people, the ssh server would prevent them from working.
 
-If we find ourselves with the right to `write` to the `.ssh` directory, then we can place *our* public key in the `/home/user/.ssh/autorized_keys` directory. The current SSH configuration will not accept keys written by other users, so we must have gained a shell as that user. We must first 
+If we find ourselves with the right to `write` to the `.ssh` directory, then we can place *our* public key in the `/home/user/.ssh/autorized_keys` directory. The current SSH configuration will not accept keys written by other users, so we must have gained a shell as that user. We must first create a new key with `ssh-keygen` and the `-f` flag to specify the output file:
+
+```shell
+$ ssh-keygen -f key 
+Generating public/private rsa key pair. Enter passphrase (empty for no passphrase): ******* 
+Enter same passphrase again: ******* 
+Your identification has been saved in key Your public key has been saved in key.pub The key fingerprint is: SHA256:...SNIP... user@parrot The key's randomart image is: +---[RSA 3072]----+ | ..o.++.+ | ...SNIP... | . ..oo+. | +----[SHA256]-----+
+```
