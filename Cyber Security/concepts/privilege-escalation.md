@@ -40,4 +40,4 @@ For example, the above script showed us the Linux version is `3.9.0-73-generic`.
 We should keep in mind kernel exploits can cause system instability and thus we should take care before running them on production systems. It's best practice to try them in a lab environment first, and only run them on production systems with express permission from and coordination with our client.
 
 ### Vulnerable Software
-Similarly, we might find 
+We should also look at installed software, for example with `dpkg -l` on Linux or by looking in `C:\Program Files` on Windows./
