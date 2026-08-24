@@ -44,4 +44,7 @@ linenum.sh
 > Note that we specified the local file name after `scp` and the remote directory it will be saved to after `:`.
 
 ## base64
-Sometimes, we might not be able to transfer the file, 
+Sometimes, we might not be able to transfer the file, for example if the host has firewall protections. In this case, we can use a simple trick. We can encode the file into `base64`, copy it, paste it into the remote machine and decode it. For example:
+
+```
+```
