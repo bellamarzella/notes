@@ -9,3 +9,10 @@ SSH-2.0-OpenSSH_8.4p1 Debian-3
 
 `netcat` can also be used to transfer files between machines, which we'll see later (unless I come back here)
 `socat` is a similar utility with some extra features, such as port forwarding and connecting to serial devices. It can also be used to upgrade a shell to a TTY.
+
+### Flags
+
+| Flag | Description                                          |
+| ---- | ---------------------------------------------------- |
+| -l   | Listen mode. Wait for a connection to connect to us. |
+| -v   | Verbose mode. Tell us as                             |

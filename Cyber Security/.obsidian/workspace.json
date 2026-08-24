@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/shells.md",
+                "file": "tools/netcat.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shells"
+              "title": "netcat"
             }
           }
         ]
@@ -201,15 +201,15 @@
   },
   "active": "75d04f63323ddbe9",
   "lastOpenFiles": [
+    "concepts/shells.md",
+    "tools/netcat.md",
     "concepts/web-enumeration.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
     "tools/nmap.md",
-    "tools/netcat.md",
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
     "concepts/http-codes.md",
-    "concepts/shells.md",
     "tools/ftp.md",
     "admin.md",
     "tools/smb.md",
