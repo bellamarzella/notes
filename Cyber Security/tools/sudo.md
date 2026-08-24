@@ -41,6 +41,7 @@ $ sudo -u user /bin/echo Hello World!
 
 ## Flags
 
-| Flag |     |
-| ---- | --- |
-|      |     |
+| Flag | Description                                                                          |
+| ---- | ------------------------------------------------------------------------------------ |
+| -l   | List allowed and forbidden commands for the invoking user, or user specified by `-U` |
+|      |                                                                                      |
