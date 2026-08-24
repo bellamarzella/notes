@@ -2,4 +2,4 @@ Once we gain access to a remote server, we're usually still a low-privileged use
 
 ## PrivEsc Checklists
 
-We'll want to begin by thoroughly en
+We'll want to begin by thoroughly enumerating the box to find any potential vulnerabilities. We can find many checklists and cheat sheets online, such as 
