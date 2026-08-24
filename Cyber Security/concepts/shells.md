@@ -137,6 +137,8 @@ These are the reasons why a `TTY Upgrade` is mandatory during a hack:
 	1. Programs that require user interaction or text layouts (like `sudo`, `mysql`, or text editors like `nano`) will completely freeze or refuse to run because they don't detect a real terminal on your end. The upgrade tricks the OS into thinking a physical keyboard is plugged into the server.
 
 ### Process
+
+#### Step 1: Upgrading TTY
 There are multiple methods, but for now we'll look at the `python/stty` method. In our `netcat` shell, we'll use the following command to use python to upgrade our shell to a full TTY:
 
 ```bash
@@ -156,4 +158,6 @@ user@htb[/htb]$ fg # [Enter]
 www-data@remotehost$
 ```
 
-Entering `fg` brings our `netcat` shell back to the foreground, at which point our terminal will show a blank line. Hitting enter again gets us back to our shell and `reset` brings
+Entering `fg` brings our `netcat` shell back to the foreground, at which point our terminal will show a blank line. Hitting enter again gets us back to our shell. We now have a fully working TTY shell with command history and everything else.
+
+#### Step 2: Cleanup
