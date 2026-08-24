@@ -47,7 +47,10 @@ Another critical aspect to look at are the privileges available to the user we h
 
 Some common ways to exploit user privileges are:
 1. [[Sudo]]
-	1. We can search something like [GTFOBins](https://gtfobins.github.io/) for applications that we have `sudo` privilege over to see whether there exist any commands that might let us gain 
+	1. We can search something like [GTFOBins](https://gtfobins.github.io/) for applications that we have `sudo` privilege over to see whether there exist any commands that might let us gain `root`.
 2. SUID
 3. Windows Token Privileges
 
+[LOLBAS](https://lolbas-project.github.io/#) also contains a list of Windows applications that can be leveraged to perform certain functions, like downloading files or executing commands as a privileged user.
+
+### Scheduled Tasks
