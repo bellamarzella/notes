@@ -166,4 +166,8 @@ We might notice the shell does not cover the whole terminal. To fix this, we nee
 ```bash
 $ echo $TERM 
 xterm-256color
+$ stty size
+67 318
 ```
+
+We now know the `TERM` variable, as well as the values for `rows` and `columns`, which we c
