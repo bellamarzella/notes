@@ -4,67 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e0b042ce26e8305b",
+        "id": "572e80a65fe97b0d",
         "type": "tabs",
         "children": [
           {
-            "id": "75d04f63323ddbe9",
+            "id": "da4c77c44cf899c3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/shells.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "shells"
-            }
-          },
-          {
-            "id": "9e9d1959a60b4aab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/privilege-escalation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "privilege-escalation"
-            }
-          },
-          {
-            "id": "14dadd0b83c87642",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/privilege-escalation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "privilege-escalation"
-            }
-          },
-          {
-            "id": "ae910d21257f7543",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/transferring-files.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "transferring-files"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -242,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7ed6e837e7a5ca65",
+  "active": "da4c77c44cf899c3",
   "lastOpenFiles": [
+    "concepts/shells.md",
     "concepts/privilege-escalation.md",
     "concepts/transferring-files.md",
     "tools/sudo.md",
@@ -256,7 +210,6 @@
     "tools/ssh.md",
     "concepts/web-enumeration.md",
     "admin.md",
-    "concepts/shells.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
     "concepts/service-scanning.md",

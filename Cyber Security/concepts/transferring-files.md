@@ -68,7 +68,7 @@ To verify that the file wasn't changed during transfer, we can hash the original
 $ md5sum shell
 321de1d7e7c3735838890a72c9ae7d1d shell
 
-user@remote$ md5sum shell
+user@remotehost$ md5sum shell
 321de1d7e7c3735838890a72c9ae7d1d shell
 ```
 
