@@ -90,3 +90,16 @@ root
 
 ### SSH Keys
 If we have read access over the `.ssh` directory for a specific user, we may be able to read their private ssh keys found in `/home/user/.ssh/id_rsa` or `/root/.ssh/id_rsa`, which we can use to log in to the server as them. 
+If we can read a file, we can copy it to our machine and use the `-i` flag to login with it:
+
+```shell
+$ vim id_rsa
+$ chmod 600 id_rsa
+$ ssh root@10.10.10.10 -i id_rsa
+
+root@10.10.10.10#
+```
+
+> Note that we used the command 'chmod 600 id_rsa' on the key after we created it on our machine to change the file's permissions to be more restrictive. If ssh keys have lax permissions, i.e., maybe read by other people, the ssh server would prevent them from working.
+
+If we find ourselves with 
