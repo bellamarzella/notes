@@ -15,7 +15,7 @@ Reverse shells are handy when we want a quick, reliable connection to our compro
 	1. Security systems are set up to strictly block random connections trying to get *in* from the internet. However, they are lax about letting internal computers connect *out* (like loading a website or checking updates).
 2. **The "Established" rule loophole.**
 	1. Because the victim started the call from the inside, the firewall approves the connection and opens up a two-way highway for that conversation. The attacker can now slide any command they want back down that approved highway.
-### Setting Up
+### Process
 #### Step 1: Listener
 We being by setting up a [[netcat]] listener on a port of our choosing:
 
@@ -87,7 +87,7 @@ These are the scenarios in which `bind` shells are used:
 	1. An e-commerce site, for example, must let `HTTP` and `HTTPS` traffic in, meaning ports 80 and 443 are open to the outside world. 
 	2. An attacker might kill the legitimate web server, and then bind a shell to the now open port. The firewall has already approved communication on port 443, so it sees nothing wrong.
 
-### Setting Up
+### Process
 #### Step 1: Bind Shell Command
 
 Once again, we can look to [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-bind-cheatsheet/) to find a suitable command. 
@@ -122,7 +122,7 @@ We're immediately dropped into a bash session and can interact with the target d
 ### Description
 An optimisation process used immediately after catching a raw shell to convert a fragile, dumb connection into a stable terminal.
 
-Once we connect through `netcat`, we'll notice that we can only type or
+Once we connect through `netcat`, we'll notice that we can only type or backspace. We can't move our cursor to edit commands, or go up through history. To do that, we need to upgrade our TTY.
 ### How it works
 1. When you first catch a shell via Netcat, it is just a dumb text pipe. It lacks keyboard features and system variables.
 2. The attacker runs a sequence of scripts on the victim (like Python) to force the OS to generate a real pseudo-terminal interface.
@@ -135,3 +135,4 @@ These are the reasons why a `TTY Upgrade` is mandatory during a hack:
 	1. If you run a command that hangs and you instinctively press `Ctrl + C` to stop it, you will kill your entire network connection instead of just the command. You have to exploit the machine all over again.
 3. **Interactive commands fail.**
 	1. Programs that require user interaction or text layouts (like `sudo`, `mysql`, or text editors like `nano`) will completely freeze or refuse to run because they don't detect a real terminal on your end. The upgrade tricks the OS into thinking a physical keyboard is plugged into the server.
+
