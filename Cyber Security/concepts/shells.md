@@ -161,3 +161,9 @@ www-data@remotehost$
 Entering `fg` brings our `netcat` shell back to the foreground, at which point our terminal will show a blank line. Hitting enter again gets us back to our shell. We now have a fully working TTY shell with command history and everything else.
 
 #### Step 2: Cleanup
+We might notice the shell does not cover the whole terminal. To fix this, we need to figure out a few variables. We can open a second terminal window, set it to the size we want, then run the following to get our variables:
+
+```bash
+$ echo $TERM 
+xterm-256color
+```
