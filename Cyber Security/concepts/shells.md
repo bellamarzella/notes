@@ -70,6 +70,8 @@ Once we receive our connection, we're able to type a command (in this case `id`)
 ## Bind Shell
 ### Description
 The opposite of a `reverse` shell. The victim is forced to open a new port on itself and attach its terminal directly to that port, which the attacker then connects to.
+
+Unlike a `reverse` shell however, if we drop connection for any reason, we can just reconnect. On the other hand, if the 
 ### How it works
 1. The attacker uses an exploit to force the victim to run a background listener.
 2. The victim binds its terminal to that listener port.
@@ -113,7 +115,7 @@ id # Input
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-
+We're immediately dropped into a bash session and can interact with the target directly.
 
 ---
 ## TTY Upgrade
