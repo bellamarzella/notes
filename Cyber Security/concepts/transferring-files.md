@@ -1,5 +1,4 @@
 We'll often need to transfer files between the attacker and victim.
-
 ## wget
 One method is to run a [Python HTTP server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) on our machine and use `wget` or `curl` to download the file on the remote host. First, `cd` to the file we need to transfer and run a `Python HTTP` server in it:
 
@@ -46,5 +45,11 @@ linenum.sh
 ## base64
 Sometimes, we might not be able to transfer the file, for example if the host has firewall protections. In this case, we can use a simple trick. We can encode the file into `base64`, copy it, paste it into the remote machine and decode it. For example:
 
+```bash
+$ base64 shell -w 0
+f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU
+
+user@remotehost$ echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell
 ```
-```
+
+## Validating File Transfers
