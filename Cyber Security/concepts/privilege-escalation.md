@@ -68,4 +68,14 @@ The easiest way is to check whether we're allowed to add new scheduled tasks. In
 If we can write to a cron job directory, we can write a bash script with a reverse shell command.
 
 ### Exposed Credentials
-We can look for files we can read and see if they contain any exposed credentials. This is especially common in `configuration`, `log` and user history (`bash_history` in Linux and `PSReadLine` in Windows) files. The enumeration scripts discussed earlier usually look for potential passwords in files and pro
+We can look for files we can read and see if they contain any exposed credentials. This is especially common in `configuration`, `log` and user history (`bash_history` in Linux and `PSReadLine` in Windows) files. The enumeration scripts discussed earlier usually look for potential passwords in files and provide them for us:
+
+```shell
+...SNIP... 
+[+] Searching passwords in config PHP files 
+[+] Finding passwords inside logs (limit 70) 
+...SNIP... 
+/var/www/html/config.php: $conn = new mysqli(localhost, 'db_user', 'password123');
+```
+
+As we can see, the database password is exposed, which would allow us to log into the local mysql database and continue looking for anything interesting. We might also check for ``
