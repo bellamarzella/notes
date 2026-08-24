@@ -150,11 +150,10 @@ www-data@remotehost$ ^Z
 
 [1] Stopped nc -lvnp 1234 
 user@htb[/htb]$ stty raw -echo 
-user@htb[/htb]$ fg 
-
-[Enter] 
-[Enter] 
+user@htb[/htb]$ fg # [Enter] 
+# [Blank Line]
+# [Enter] 
 www-data@remotehost$
 ```
 
-Entering `fg` brings our 
+Entering `fg` brings our `netcat` shell back to the foreground, at which point our terminal will show a blank line. Hitting enter again gets us back to our shell and `reset` brings
