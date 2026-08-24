@@ -186,4 +186,5 @@ A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request
 Functionally, its very similar to command injection, just that we've leveraged an exploit such that we no longer need to inject the command.
 
 ### Process
-#### Step 1: Writing 
+#### Step 1: Writing the Web Shell
+We need to write a web shell that takes our command through a `GET` request, executes it, and prints the output back. A web shell script is typically very short and can be easily memorised:
