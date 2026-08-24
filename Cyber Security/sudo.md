@@ -1,1 +1,0 @@
-The `sudo` command allows a user to **exevute commands as a different user.** It is usually used to allow lower privileged users to execut

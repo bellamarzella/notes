@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sudo.md",
+                "file": "tools/sudo.md",
                 "mode": "source",
                 "source": false
               },
@@ -230,10 +230,12 @@
   },
   "active": "14dadd0b83c87642",
   "lastOpenFiles": [
-    "concepts/privilege-escalation.md",
-    "sudo.md",
-    "concepts/shells.md",
+    "tools/tmux.md",
+    "tools/sudo.md",
     "concepts/web-enumeration.md",
+    "admin.md",
+    "concepts/privilege-escalation.md",
+    "concepts/shells.md",
     "tools/netcat.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
@@ -242,13 +244,11 @@
     "concepts/public-exploits.md",
     "concepts/http-codes.md",
     "tools/ftp.md",
-    "admin.md",
     "tools/smb.md",
     "concepts/ports.md",
     "concepts/owasp-top-10.md",
     "tools/openvpn.md",
     "tools/vim.md",
-    "tools/tmux.md",
     "tools/ssh.md",
     "concepts",
     "ew.md",
