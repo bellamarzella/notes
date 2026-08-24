@@ -33,4 +33,6 @@ Once the script runs, it collects information and displays it in an easy to pars
 
 ## Vulnerabilities
 ### Kernel Exploits
-If we encounter a server running an old operating system, we should begin by looking for potential kernel vulnerabilities. If the operating system is old, it likely isn't being maintained with 
+If we encounter a server running an old operating system, we should begin by looking for potential kernel vulnerabilities, as it is likely vulnerable to now patched exploits.
+
+For example, the aboc
