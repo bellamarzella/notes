@@ -170,4 +170,13 @@ $ stty size
 67 318
 ```
 
-We now know the `TERM` variable, as well as the values for `rows` and `columns`, which we c
+We now know the `TERM` variable, as well as the values for `rows` and `columns`, which we can use back in our `netcat` shell:
+
+```bash
+www-data@remotehost$ export TERM=xterm-256color 
+www-data@remotehost$ stty rows 67 columns 318
+```
+
+Now we should have a `netcat` shell with the terminal's full features.
+
+## Web Shell
