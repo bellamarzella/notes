@@ -185,6 +185,8 @@ A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request
 
 Functionally, its very similar to command injection, just that we've leveraged an exploit such that we no longer need to inject the command.
 
+### Benefits
+
 ### Process
 #### Step 1: Writing our Web Shell
 We need to write a web shell that takes our command through a `GET` request, executes it, and prints the output back. A web shell script is typically very short and can be easily memorised:
@@ -230,6 +232,10 @@ uid=33(www-data) gid[...]
 
 ##### cURL
 Alternatively, we run the following `curl` command in the same way:
+
 ```bash
-shortcake6249@htb[/htb]$ curl http://SERVER_IP:PORT/shell.php?cmd=id uid=33(www-data) gid=33(www-data) groups=33(www-data)
+$ curl http://SERVER_IP:PORT/shell.php?cmd=id
+
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
+
