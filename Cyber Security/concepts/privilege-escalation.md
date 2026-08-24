@@ -47,7 +47,7 @@ Another critical aspect to look at are the privileges available to the user we h
 
 Some common ways to exploit user privileges are:
 1. [[Sudo]]
-	1. Once we find a particular application we can run with `sudo`, we can look for ways to exploit it to get a shell as ro
+	1. We can search something like [GTFOBins](https://gtfobins.github.io/) for applications that we have `sudo` privilege over to see whether there exist any commands that might let us gain 
 2. SUID
 3. Windows Token Privileges
 
