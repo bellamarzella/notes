@@ -53,3 +53,11 @@ user@remotehost$ echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2
 ```
 
 ## Validating File Transfers
+To validate file format, we can use `file`:
+
+```bash
+user@remotehost$ file shell
+shell: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, no section header
+```
+
+We can see that ru
