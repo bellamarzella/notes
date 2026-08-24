@@ -138,6 +138,9 @@ These are the reasons why a `TTY Upgrade` is mandatory during a hack:
 
 ### Process
 There are multiple methods, but for now we'll look at the `python/stty` method. In our `netcat` shell, we'll use the following command to use python to upgrade our shell to a full TTY:
+
 ```bash
 $ python -c 'import pty; pty.spawn("/bin/bash")'
 ```
+
+After running that, hitting `ctrl+z` sends our shell to the background and takes us back to our local terminal where we input the follow
