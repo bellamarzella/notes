@@ -224,6 +224,12 @@ We visit the `shell.php` page and use `?cmd=[command]` to execute our commands. 
 ```URL
 http://SERVER_IP:PORT/shell.php?cmd=id
 
-[]
-uid=33
+[WEBPAGE MIGHT LOOK LIKE:]
+uid=33(www-data) gid[...]
 ``` 
+
+##### cURL
+Alternatively, we run the following `curl` command in the same way:
+```bash
+shortcake6249@htb[/htb]$ curl http://SERVER_IP:PORT/shell.php?cmd=id uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
