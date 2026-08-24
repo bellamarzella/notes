@@ -29,4 +29,7 @@ User & Groups: uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ...SNIP...
 ```
 
-Once the script runs, it collects information 
+Once the script runs, it collects information and displays it in an easy to parse report. Let's look at some vulnerabilities we should look out for from these scripts.
+
+## Vulnerabilities
+### Kernel Exploits
