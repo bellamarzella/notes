@@ -185,7 +185,7 @@ A webscript, typically `PHP`or `ASPX` that accepts commands through HTTP request
 
 A benefit of the web shell is that it bypasses firewalls, as it doesn't open a new connection but instead runs on whatever port the web application is using. Another is that if the compromised host is rebooted the web shell would still be in place, and we can access it without having to exploit the remote host again.
 
-On the other hand, it isn't as interactive as a reverse or bind shell since we need to reque
+On the other hand, it isn't as interactive as a reverse or bind shell since we need to request a new URL to execute commands. Still, we can always just upgrade 
 
 ### Process
 #### Step 1: Writing our Web Shell
