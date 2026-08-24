@@ -59,4 +59,7 @@ Windows and Linux both have methods to run specific scripts at certain intervals
 1. Adding new scheduled tasks/cron jobs
 2. Tricking them to run malicious software
 
-The easiest way is to check whether we're allowed to add new scheduled tasks. In Linux, a common way to maintain scheduled tasks is through `Cron Jobs`. These are directories that we might be able to `write` new jobs to if we hav
+The easiest way is to check whether we're allowed to add new scheduled tasks. In Linux, a common way to maintain scheduled tasks is through `Cron Jobs`. These are directories that we might be able to `write` new jobs to if we have the permissions. These include:
+
+- `/etc/crontab`
+- `/etc/`
