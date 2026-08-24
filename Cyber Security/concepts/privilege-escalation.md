@@ -35,4 +35,4 @@ Once the script runs, it collects information and displays it in an easy to pars
 ### Kernel Exploits
 If we encounter a server running an old operating system, we should begin by looking for potential kernel vulnerabilities, as it is likely vulnerable to now patched exploits.
 
-For example, the aboc
+For example, the above script showed us the Linux version is `3.9.0-73-generic`. Searching for [[public-exploits]], we might find ``
