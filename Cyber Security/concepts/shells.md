@@ -25,8 +25,14 @@ We now have a `netcat` listener waiting for a connection, so we can execute the 
 First, we need to find our system's IP so we know where to send the connection:
 ```bash
 $ ip a
-
+...SNIP... 
+3: tun0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN 
+group default qlen 500 
+	link/none 
+	inet 10.10.10.10/23 scope global tun0 
+...SNIP...
 ```
+> We are connecting to the IP in 'tun0' because we can only connect to HTB boxes 
 
 ---
 ## Bind Shell
