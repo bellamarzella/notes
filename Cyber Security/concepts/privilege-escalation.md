@@ -62,4 +62,10 @@ Windows and Linux both have methods to run specific scripts at certain intervals
 The easiest way is to check whether we're allowed to add new scheduled tasks. In Linux, a common way to maintain scheduled tasks is through `Cron Jobs`. These are directories that we might be able to `write` new jobs to if we have the permissions. These include:
 
 - `/etc/crontab`
-- `/etc/`
+- `/etc/cron.d`
+- `/var/spool/cron/crontabs/root`
+
+If we can write to a cron job directory, we can write a bash script with a reverse shell command.
+
+### Exposed Credentials
+We can look for files we can read and see if they contain any 
