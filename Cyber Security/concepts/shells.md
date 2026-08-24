@@ -91,7 +91,9 @@ These are the scenarios in which `bind` shells are used:
 ### Setting Up
 #### Step 1: Bind Shell Command
 
-Once again, we look to 
+Once again, we can look to [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-bind-cheatsheet/) to find a suitable command. 
+
+> We start a listening connection on port `1234` with IP `0.0.0.0` on the victim so that we can connect from anywhere.
 
 ---
 ## TTY Upgrade
