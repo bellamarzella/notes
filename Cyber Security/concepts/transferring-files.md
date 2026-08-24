@@ -60,4 +60,7 @@ user@remotehost$ file shell
 shell: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, no section header
 ```
 
-We can see that ru
+We can see that running `file` on `shell` reveals it is an `ELF Binary`, meaning it was successfully transferred.
+
+To verify that the file wasn't changed during transfer, compare their hashes, for we can run `md5sum` on the original and copy:
+
