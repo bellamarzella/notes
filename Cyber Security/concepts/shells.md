@@ -38,7 +38,9 @@ group default qlen 500
 > We are connecting to the IP in `tun0` because we can only connect to HTB boxes through the VPN connection, as they do not have internet access. In a real scenario, we may directly connect through `eth0`.
 
 #### Step 3: Reverse Shell Command
-The command we run depends on the victims OS, and what applications we can access. [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) has a 
+The command we run depends on the victims OS, and what applications we can access. [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) has a comprehensive list of reverse shell commands that covers a wide range of compromised hosts.
+
+Here are a few examples of more reliable reverse shell co
 
 ---
 ## Bind Shell
