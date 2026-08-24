@@ -131,3 +131,4 @@ $ ssh root@10.10.10.10 -i key
 root@remotehost#
 ```
 
+We can now ssh in as `root`.
