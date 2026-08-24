@@ -54,3 +54,4 @@ Some common ways to exploit user privileges are:
 [LOLBAS](https://lolbas-project.github.io/#) also contains a list of Windows applications that can be leveraged to perform certain functions, like downloading files or executing commands as a privileged user.
 
 ### Scheduled Tasks
+Windows and Linux both have methods to run specific scripts at certia
