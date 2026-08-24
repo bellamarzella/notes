@@ -87,6 +87,12 @@ These are the scenarios in which `bind` shells are used:
 3. **The attacker hijacks an already approved port.**
 	1. An e-commerce site, for example, must let `HTTP` and `HTTPS` traffic in, meaning ports 80 and 443 are open to the outside world. 
 	2. An attacker might kill the legitimate web server, and then bind a shell to the now open port. The firewall has already approved communication on port 443, so it sees nothing wrong.
+
+### Setting Up
+#### Step 1: Bind Shell Command
+
+Once again, we look to 
+
 ---
 ## TTY Upgrade
 ### Description
