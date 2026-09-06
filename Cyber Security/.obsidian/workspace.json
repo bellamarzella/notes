@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "admin/how-to-connect.md",
+                "file": "concepts/ports.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how-to-connect"
+              "title": "ports"
             }
           }
         ],
@@ -244,8 +244,8 @@
   },
   "active": "ef4550db2d74ab52",
   "lastOpenFiles": [
-    "admin/unfinished.md",
     "admin/how-to-connect.md",
+    "admin/unfinished.md",
     "admin",
     "concepts/ports.md",
     "ports.md",
