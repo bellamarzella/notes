@@ -12,6 +12,6 @@ smbclient -L '\\[target ip]\' -N
 ### Step 2: Connect to a specific share
 If Step 1 shows an interesting folder name (like `\backups` or `\shares`), connect straight to it:
 ```bash
-smbclient \\[target ip]\[share name] -N
+smbclient '\\[target ip]\[share name]' -N
 ```
 *(Once inside, you use the exact same commands as [[ftp]]: `ls` to look around, and `get filename.txt` to download files).*
