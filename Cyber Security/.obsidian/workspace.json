@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/smb.md",
+                "file": "tools/nmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "smb"
+              "title": "nmap"
             }
           }
         ],
@@ -244,6 +244,7 @@
   },
   "active": "ef4550db2d74ab52",
   "lastOpenFiles": [
+    "tools/smb.md",
     "tools/nmap.md",
     "concepts/ports.md",
     "admin/how-to-connect.md",
@@ -262,7 +263,6 @@
     "tools/vim.md",
     "tools/netcat.md",
     "tools/openvpn.md",
-    "tools/smb.md",
     "tools/ssh.md",
     "tools/gobuster.md",
     "tools/metasploit.md",
