@@ -5,7 +5,7 @@ Connects to Windows Server Message Block (SMB) shares on Port 445 to view or dow
 ### Step 1: List the available shares
 Check if the server lets you view folder names without a password by running:
 ```bash
-smbclient -L \\[target ip]\ -N
+smbclient -L '\\[target ip]\' -N
 ```
 - `-L` : Lists the available shares (folders) on the target.
 - `-N` : No password. Tells the tool to attempt a null session connection.
