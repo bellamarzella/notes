@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/owasp-top-10.md",
+                "file": "tools/gobuster.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "owasp-top-10"
+              "title": "gobuster"
             }
           }
         ],
@@ -244,15 +244,16 @@
   },
   "active": "ef4550db2d74ab52",
   "lastOpenFiles": [
+    "concepts/ports.md",
+    "concepts/privilege-escalation.md",
+    "concepts/owasp-top-10.md",
+    "concepts/http-codes.md",
     "tools/nmap.md",
     "tools/smb.md",
-    "concepts/ports.md",
     "admin/how-to-connect.md",
     "admin/unfinished.md",
     "admin",
     "ports.md",
-    "concepts/http-codes.md",
-    "concepts/privilege-escalation.md",
     "machines/nibbles.md",
     "machines",
     "concepts/web-enumeration.md",
@@ -269,7 +270,6 @@
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
     "tools/ftp.md",
-    "concepts/owasp-top-10.md",
     "concepts",
     "ew.md",
     "Hack The Box/Penetration Tester/Web Enumeration - Commands.md",
