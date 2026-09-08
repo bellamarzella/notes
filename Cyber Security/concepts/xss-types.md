@@ -2,7 +2,6 @@
 
 ### What is it?
 The payload is part of the request sent to the server and is immediately reflected back in the server's HTTP response. It is non-persistent, meaning the payload has to be manually triggered per victim and is never saved.
-
 ### What might it look like?
 The attacker crafts a malicious URL containing a script and sends it to a victim. When the victim clicks the link, the browser sends the request, and the server immediately echoes the payload back into the HTML response, triggering the script on the victim's machine.
 
@@ -19,16 +18,18 @@ The payload sits on the server until it is pulled. For example, a different user
 
 ## DOM-based XSS
 ### What is it?
-Unlike the other two, the server is completely oblivious and uninvolved to DOM-XSS. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
+Unlike the other two, the server is completely oblivious and uninvolved in DOM-XSS. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
 ### How it works
 DOM-XSS relies on client-side JS executing something it shouldn't. It is defined by two components:
 #### Source
-A JS property an attacker can control from the outside world, such as a URL hash, URL query or `document.refferer`.
+A JS property an attacker can control from the outside world, such as a URL hash, URL query, or `document.referrer`.
 #### Sink
-A dangerous JS function or DOM object can execute code if given raw text, such as `element.innerHTML`, `document.write`, `eval()` or legacy jQuery selectors like `$()`.
-
+A dangerous JS function or DOM object that can execute code if given raw text, such as `element.innerHTML`, `document.write`, `eval()`, or legacy jQuery selectors like `$()`.
 ### What might it look like?
+
 #### Setup
 The attacker crafts a link where the URL contains a malicious script after a hash or query: `http://example.com/?search=javascript:alert()`.
 #### Execution
-The victim is phished and clicks the link. Their browser downloads the clean page from the server. It then reads the source, in this case our URL query parameter, and blindly passes it to a sink, such as `innerHTML`. The browser interprets the string as HTML and execu
+The victim is phished and clicks the link. Their browser downloads the clean page from the server. It then reads the source—in this case, our URL query parameter—and blindly passes it to a sink, such as `innerHTML`. The browser interprets the string as HTML, renders the tag, and executes the payload.
+
+
