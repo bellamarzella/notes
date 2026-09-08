@@ -42,6 +42,6 @@ The payload is stored on the server (usually in a database, file system or log f
 ### What might it look like?
 Stored XSS is a two phased attack:
 #### 1. The Injection
-The attacker first needs to get the payload onto the server. They input a malicious script somewhere that is saved, such as in the form of a comment.
+The attacker first needs to get the payload onto the server. They input a malicious script somewhere that is saved, such as in the form of a comment on a blog.
 #### 2. The Trigger
-The payload sits on the server until 
+The payload sits on the server until it is pulled. For example, a different user goes to that same blog and loads the comments, at which point the attackers script is pulled and triggered on the victims machine.
