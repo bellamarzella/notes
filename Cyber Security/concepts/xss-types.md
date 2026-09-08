@@ -19,5 +19,8 @@ The payload sits on the server until it is pulled. For example, a different user
 
 ## DOM-based XSS
 ### What is it?
-Unlike the other two, the server is completely oblivious and uninvolved to DOM-. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
+Unlike the other two, the server is completely oblivious and uninvolved to DOM-XSS. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
 
+### How it works
+DOM-XSS relies on client-side JS exe
+#### The Source
