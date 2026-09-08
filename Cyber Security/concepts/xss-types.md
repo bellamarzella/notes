@@ -12,9 +12,9 @@ For example, an attacker targets a website's search feature. They swap a normal 
 The payload is stored on the server (usually in a database, file system or log file) and is pulled and embedded onto the page, being shown to any user who visits the site.
 ### What might it look like?
 Stored XSS is a two phased attack:
-#### 1. Injection
+#### Injection
 The attacker first needs to get the payload onto the server. They input a malicious script somewhere that is saved, such as in the form of a comment on a blog.
-#### 2. Execution
+#### Execution
 The payload sits on the server until it is pulled. For example, a different user goes to that same blog and loads the comments, at which point the attackers script is pulled and triggered on the victims machine.
 
 ## DOM-based XSS
@@ -22,5 +22,6 @@ The payload sits on the server until it is pulled. For example, a different user
 Unlike the other two, the server is completely oblivious and uninvolved to DOM-XSS. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
 
 ### How it works
-DOM-XSS relies on client-side JS exe
-#### The Source
+DOM-XSS relies on client-side JS executing something it shouldn't. It is defined by two components:
+#### Source
+A JS property an attacker can control from the outside world, such as the URL hash, URL query
