@@ -67,10 +67,14 @@
             "id": "8e91a5647f2ab8f0",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "admin/how-to-connect.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "how-to-connect"
             }
           }
         ],
@@ -252,11 +256,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7ed6e837e7a5ca65",
+  "active": "8e91a5647f2ab8f0",
   "lastOpenFiles": [
-    "Untitled.md",
     "admin/unfinished.md",
     "admin/how-to-connect.md",
+    "Untitled.md",
     "concepts/xss-types.md",
     "tools/gobuster.md",
     "concepts/ports.md",
