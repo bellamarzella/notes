@@ -18,4 +18,6 @@ The attacker first needs to get the payload onto the server. They input a malici
 The payload sits on the server until it is pulled. For example, a different user goes to that same blog and loads the comments, at which point the attackers script is pulled and triggered on the victims machine.
 
 ## DOM-based XSS
-In this form, the server is completely oblivious and uninvolved. The server s
+### What is it?
+Unlike the other two, the server is completely oblivious and uninvolved to DOM-. The server sends a normal, safe response to the browser. The vulnerability exists entirely within the victim's browser after the page loads due to some client-side vulnerability.
+
