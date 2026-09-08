@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "admin/how-to-connect.md",
+                "file": "concepts/xss-types.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how-to-connect"
+              "title": "xss-types"
             }
           }
         ],
@@ -258,8 +258,9 @@
   },
   "active": "8e91a5647f2ab8f0",
   "lastOpenFiles": [
-    "admin/unfinished.md",
-    "admin/how-to-connect.md",
+    "misc/unfinished.md",
+    "machines/nibbles.md",
+    "misc/how-to-connect-htb.md",
     "Untitled.md",
     "concepts/xss-types.md",
     "tools/gobuster.md",
@@ -269,9 +270,8 @@
     "concepts/http-codes.md",
     "tools/nmap.md",
     "tools/smb.md",
-    "admin",
+    "misc",
     "ports.md",
-    "machines/nibbles.md",
     "machines",
     "concepts/web-enumeration.md",
     "concepts/shells.md",
