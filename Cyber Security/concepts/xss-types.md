@@ -2,9 +2,11 @@
 
 ### What is it?
 The payload is part of the request sent to the server and is immediately reflected back in the server's HTTP response. It is non-persistent, meaning the payload has to be manually triggered per victim and is never saved.
+
 ### What might it look like?
 The attacker crafts a malicious URL containing a script and sends it to a victim. When the victim clicks the link, the browser sends the request, and the server immediately echoes the payload back into the HTML response, triggering the script on the victim's machine.
 
+For example, an attacker targets a website's search feature. They swap a normal search term in the URL with a malicious script (e.g., `?search=<script>...`). When the victim clicks this link, the server generates a search results page that blindly echoes that script back into the page text, executing it instantly.
 ## Stored XSS 
 ### What is it?
 The payload is stored on the server (usually in a database, file system or log file) and is pulled and embedded onto the page, being shown to any user who visits the site.
@@ -15,3 +17,5 @@ The attacker first needs to get the payload onto the server. They input a malici
 #### 2. Execution
 The payload sits on the server until it is pulled. For example, a different user goes to that same blog and loads the comments, at which point the attackers script is pulled and triggered on the victims machine.
 
+## DOM-based XSS
+In this form, the server is completely oblivious and uninvolved. The server s
