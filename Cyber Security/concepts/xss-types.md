@@ -37,4 +37,9 @@ Most often, reflected XSS occurs via URL query parameters, search inputs, or for
 
 ## Stored XSS 
 ### What is it?
-The payload is stored on the server (usually in a database, file system or log file) 
+The payload is stored on the server (usually in a database, file system or log file) and is pulled and embedded onto the page, being shown to any user who visits the site.
+
+### What might it look like?
+Stored XSS is a two phased attack:
+#### 1. The Injection
+The attacker first needs to get the payload ont
