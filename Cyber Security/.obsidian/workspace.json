@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "gobuster"
             }
+          },
+          {
+            "id": "8e91a5647f2ab8f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/xss-types.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "xss-types"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -242,8 +256,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef4550db2d74ab52",
+  "active": "7ed6e837e7a5ca65",
   "lastOpenFiles": [
+    "tools/gobuster.md",
+    "concepts/xss-types.md",
     "concepts/ports.md",
     "concepts/privilege-escalation.md",
     "concepts/owasp-top-10.md",
@@ -265,14 +281,12 @@
     "tools/netcat.md",
     "tools/openvpn.md",
     "tools/ssh.md",
-    "tools/gobuster.md",
     "tools/metasploit.md",
     "concepts/service-scanning.md",
     "concepts/public-exploits.md",
     "tools/ftp.md",
     "concepts",
     "ew.md",
-    "Hack The Box/Penetration Tester/Web Enumeration - Commands.md",
     "tools",
     "Hack The Box/Penetration Tester/Getting Started",
     "Hack The Box/Penetration Tester",
