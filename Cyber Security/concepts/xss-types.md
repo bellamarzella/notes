@@ -24,4 +24,6 @@ Unlike the other two, the server is completely oblivious and uninvolved to DOM-X
 ### How it works
 DOM-XSS relies on client-side JS executing something it shouldn't. It is defined by two components:
 #### Source
-A JS property an attacker can control from the outside world, such as the URL hash, URL query
+A JS property an attacker can control from the outside world, such as a URL hash, URL query or `document.refferer`.
+#### Sink
+A dangerous JS function or DOM object can execute code if given raw text, such as `element.innerHTML`, `document.wri`
