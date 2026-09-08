@@ -35,4 +35,6 @@ Most often, reflected XSS occurs via URL query parameters, search inputs, or for
 *   **Phishing Dependency:** Because the code isn't saved on the website, an attacker *must* trick the victim into clicking the specifically crafted link or submitting a malicious form themselves. 
 *   **One-to-One Impact:** One link equals one compromised session. It does not naturally spread to other users browsing the site normally.
 
-## Reflected XSS (Persistent)
+## Stored XSS 
+### What is it?
+The payload is stored on the server (usually in a database, file system or log file) 
