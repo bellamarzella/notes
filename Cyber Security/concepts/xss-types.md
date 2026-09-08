@@ -29,4 +29,6 @@ A dangerous JS function or DOM object can execute code if given raw text, such a
 
 ### What might it look like?
 #### Setup
-The attacker crafts a link where the URL contains a malicious script after a 
+The attacker crafts a link where the URL contains a malicious script after a hash or query: `http://example.com/?search=javascript:alert()`.
+#### Execution
+The victim is phished and clicks the link. Their browser downloads the 
