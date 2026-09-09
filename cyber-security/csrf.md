@@ -51,4 +51,4 @@ If the victim visits this webpage:
 > XSRF is usually described in relation to cookie-based session handling, it can also arise in other contexts where the application automatically adds some user credentials to requests, such as HTTP Basic authentication and certificate-based authentication.
 
 ### Constructing a CSRF attack
-Manually writing the HTML for a CSRF attack can be annoying, especially  but we can use tools like [CSRFShark](https://csrfshark.github.io/) to make it easier for us.
+Manually writing the HTML for a CSRF attack can be annoying, especially with many parameter,  but we can use tools like [CSRFShark](https://csrfshark.github.io/) to make it easier for us. Burp Suite professional 
