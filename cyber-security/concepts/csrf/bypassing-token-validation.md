@@ -10,4 +10,5 @@ In a variation of the above, some applications do tie the token to a cookie, but
 This is harder to exploit, but still possible. If the website has any behaviour that would allow an attacker to set a cookie in a victim's browser, then the attack is possible. The attacker can login with their own account, obtain a valid token and its cookie, leverage the cookie-setting behaviour to place their cookie within the victim's browser and then feed their token to the victim.
 
 >**Note**
->The cookie-setting behaviour doesn't even need to exist within the same web application as the CS
+>The cookie-setting behaviour doesn't even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the target application, if the cookie has suitable scope. For example, a cookie-setting function on `staging.demo.website.com` could be leverage to place a cookie submitted to `secure.website.com`.
+
