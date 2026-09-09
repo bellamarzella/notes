@@ -2,4 +2,6 @@
 ### Validation depends on request method
 Some applications will correctly validate the token, but only when the request uses the `POST` method, meaning attackers can just switch to a `GET` request to bupass the validation entirely (or vice-versa).
 ### Validation depends on token being present
-Some applications will correctly validate the token when it is present, but just skip it if it is omitted. In this situation, an attacker can just 
+Some applications will correctly validate the token when it is present, but just skip it if it is omitted. In this situation, an attacker can remove the entire token parameter.
+### Token is not tied to user session
+Some applications do not validate the token belonds to the same session as the user making the reust. Instead, it maintains a global pool of issued tokens and 
