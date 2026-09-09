@@ -7,4 +7,6 @@ There are three conditions that must be in place for a CSRF attack to be possibl
 ### A desirable action
 There is an action within the application that the attacker has a reason to induce. There's no point in forcing a user to, say, transfer money to another account they still have control over (unless, for example, this could be leveraged for a scam).
 ### Cookie-based session handling
-Performing this action involving issuing one or more HTTP requests and the application relies solely on session cookies to identify who made the request. There is **no other mech**
+Performing this action involving issuing one or more HTTP requests and the application relies solely on session cookies to identify who made the request. There is **no other mechanism** in place to verify who is making a request.
+### No unpredictable request parameters
+The requests that perform the action do not contain parameters whose value the attacker cannot determine or guess. For example, a password change request isn
