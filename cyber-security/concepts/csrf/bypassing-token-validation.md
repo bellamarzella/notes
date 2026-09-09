@@ -17,9 +17,4 @@ f the web application has some behaviour that would allow the attacker to set a 
 >**Note**
 >The cookie-setting behaviour doesn't even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the target application, if the cookie has suitable scope. For example, a cookie-setting function on `staging.demo.website.com` could be leverage to place a cookie submitted to `secure.website.com`.
 #### Token is tied to a non-session cookie but server maintains record of tokens
-If the server maintains a pool of valid tokens, we can borrow from the 
-
-
-
-### Token is duplicated in a cookie
-In a further variation of the above, some applications do not maintain server-side records of tokens that have been issued, but instead duplicate each token within a cookie and a request parameter.
+If the server maintains a pool of valid tokens, then, as before, we can login to generate our own token, place a cookie on the victim's browser with our token, then include that same token in the CSRF payload.
