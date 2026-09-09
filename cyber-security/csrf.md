@@ -10,7 +10,6 @@ There is an action within the application that the attacker has a reason to indu
 Performing this action involving issuing one or more HTTP requests and the application relies solely on session cookies to identify who made the request. There is **no other mechanism** in place to verify who is making a request.
 ### No unpredictable request parameters
 The requests that perform the action do not contain parameters whose value the attacker cannot determine or guess. For example, a password changing function is vulnerable if the user must input their existing password to change it.
-
 ### Example
 Suppose an application contains a function that lets the user change the email associated with their account. When a user performs this action, they make a HTTP request that looks like the following:
 
@@ -28,3 +27,9 @@ email=wiener@normal-user.com
 2. **Cookie-based session handling**: The application uses a session cookie (`session=yvth...`) to track which user issued the request with no other mechanisms in place to do this.
 3. **No unpredictable request parameters**: The attacker can easily determine the values of the other parameters needed for the request.
 
+With these conditions all being true, the attacker can construct a webpage with the following HTML:
+```HTML
+<html> 
+	<body> 
+			<form action="https://vulnerable-website.com/email/change" method="POST"> <input type="hidden" name="email" value="pwned@evil-user.net" /> </form> <script> document.forms[0].submit(); </script> </body> </html>
+```
