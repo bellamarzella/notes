@@ -13,7 +13,15 @@ The requests that perform the action do not contain parameters whose value the a
 
 ### Example
 Suppose an application contains a function that lets the user change the email associated with their account. When a user performs this action, they make a HTTP request that looks like the following:
+
 ```HTML
-POST /email/change HTTP/1.1 Host: vulnerable-website.com Content-Type: application/x-www-form-urlencoded Content-Length: 30 Cookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE email=wiener@normal-user.com
+POST /email/change HTTP/1.1 
+Host: vulnerable-website.com 
+Content-Type: application/x-www-form-urlencoded 
+Content-Length: 30 
+Cookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE 
+
+email=wiener@normal-user.com
 ```
 
+1. **A desirable action**: Changing the email address on a user's account is of interest to an attacker. Following this, the attacker would typically be able to trigger a password reset and take ove
