@@ -47,5 +47,6 @@ If the victim visits this webpage:
 2. If the user is currently logged in, their browser will automatically include their session cookie in the request.
 3. The vulnerable website processes the request in the normal way, treating it as having been made by the victim and changing their email.
 
-> Note
-> XSRF is usually described in relation to cookie-based 
+> **Note**
+> XSRF is usually described in relation to cookie-based session handling, it can also arise in other contexts where the application automatically adds some user credentials to requests, such as HTTP Basic authentication and certificate-based authentication.
+
