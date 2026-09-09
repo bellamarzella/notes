@@ -24,4 +24,5 @@ Cookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE
 email=wiener@normal-user.com
 ```
 
-1. **A desirable action**: Changing the email address on a user's account is of interest to an attacker. Following this, the attacker would typically be able to trigger a password reset and take ove
+1. **A desirable action**: Changing the email address on a user's account is of interest to an attacker. Following this, the attacker would typically be able to trigger a password reset and take full control of the account.
+	1. **Cookie-based session handling**: The application uses a session cookie (`session=`)
