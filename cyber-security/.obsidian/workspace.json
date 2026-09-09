@@ -140,7 +140,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#£",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,7 +164,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -284,7 +285,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "28d6cb47f28f1333",
+  "active": "f2075fc2a730cfcd",
   "lastOpenFiles": [
     "concepts/csrf/csrf-basics.md",
     "concepts/csrf/bypassing-token-validation.md",

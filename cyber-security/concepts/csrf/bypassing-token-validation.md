@@ -8,8 +8,8 @@ Some applications do not validate the token belongs to the same session as the u
 ### Tokens & Cookies
 The next flaws involve tokens being tied to cookies, so it's important we understand what this actually means. 
 One way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
-#£## Token is tied to a non-session cookie
-In a variation of the above, some applications do tie the token to a cookie, but not to the one that tracks the session. This can easily occur if an application employs two different frameworks, one for session handling and one for CSRF protection.
+#### Token is tied to a non-session cookie
+Some applications tie the token to a cookie, but not to the one that tracks the session. This can easily occur if an application employs two different frameworks, one for session handling and one for CSRF protection.
 This is harder to exploit, but still possible. If the website has any behaviour that would allow an attacker to set a cookie in a victim's browser, then the attack is possible. The attacker can login with their own account, obtain a valid token and its cookie, leverage the cookie-setting behaviour to place their cookie within the victim's browser and then feed their token to the victim.
 
 >**Note**
