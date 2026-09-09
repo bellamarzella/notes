@@ -57,7 +57,6 @@ Manually writing the HTML for a CSRF attack can be annoying, especially with man
 The delivery mechanisms for a CSRF attack are essentially the same as for reflected XSS. Typically, the attacker places their malicious code on a website they control and then get a victim to visit it. 
 
 Some simple CSRF exploits employ the GET method and can be fully self-contained within a single URL on the vulnerable website. In this situation, the attacker may not need an external website and can instead directly feed victims a malicious URL on the vulnerable domain. For example: ``<img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">``
-
 ### Common Defences
 Nowadays, a successful CSRF attack will often require bypassing anti-CSRF measures on the target website, victims browser or both. Here are some of the common ones:
 #### CSRF tokens
@@ -66,6 +65,5 @@ In short, this adds an *unpredictable request parameter*, which as we mentioned 
 #### SameSite Cookies
 SameSite is a browser mechanism that determines when a website's cookies are included in request originating form other websites. Requests to perform sensitive actions typically require an authenticated session cookie, meaning the appropriate SameSite restrictions can prevent an attacker from triggering these actions cross-site.
 Since 2021, Chrome enforces `Lax` SameSite restrictions by default. This is the proposed standard and it is likely that other major browsers will follow suit.
-
 #### Referrer-based validation
 Some applcations make use of the HTTP Referrer header to attempt to defend against CSRF attacks, normally by verifying that the request originated from the application's own domain. However, cookies can be manipulated, and this is genreally less effective that CSRF token validation.
