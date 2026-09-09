@@ -56,6 +56,7 @@ Manually writing the HTML for a CSRF attack can be annoying, especially with man
 ### Delivering a CSRF attack
 The delivery mechanisms for a CSRF attack are essentially the same as for reflected XSS. Typically, the attacker places their malicious code on a website they control and then get a victim to visit it. 
 
-Some simple CSRF exploits employ the GET method and can be fully self-contained within a single URL on the vulnerable website. In this situation, the attacker may not need an external website and can instead directly feed victims a malicious URL on the vulnerable domain. For example:
+Some simple CSRF exploits employ the GET method and can be fully self-contained within a single URL on the vulnerable website. In this situation, the attacker may not need an external website and can instead directly feed victims a malicious URL on the vulnerable domain. For example: ``<img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">``
 
-``<img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">``
+### Common Defences
+Nowadays, a successful CSRF attack will often require bypassing anti-CSRF measures on the target website, victims browser or both. Here are some of 
