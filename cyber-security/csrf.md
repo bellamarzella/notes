@@ -9,4 +9,11 @@ There is an action within the application that the attacker has a reason to indu
 ### Cookie-based session handling
 Performing this action involving issuing one or more HTTP requests and the application relies solely on session cookies to identify who made the request. There is **no other mechanism** in place to verify who is making a request.
 ### No unpredictable request parameters
-The requests that perform the action do not contain parameters whose value the attacker cannot determine or guess. For example, a password change request isn
+The requests that perform the action do not contain parameters whose value the attacker cannot determine or guess. For example, a password changing function is vulnerable if the user must input their existing password to change it.
+
+### Example
+Suppose an application contains a function that lets the user change the email associated with their account. When a user performs this action, they make a HTTP request that looks like the following:
+```HTML
+POST /email/change HTTP/1.1 Host: vulnerable-website.com Content-Type: application/x-www-form-urlencoded Content-Length: 30 Cookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE email=wiener@normal-user.com
+```
+
