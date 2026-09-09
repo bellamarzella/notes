@@ -42,4 +42,6 @@ With these conditions all being true, the attacker can construct a webpage with 
 </html>
 ```
 
-If the victim 
+If the victim visits this webpage:
+1. The attacker's page triggers a HTTP request to the vulnerable website.
+2. If the user is currently logged in, their browser will 
