@@ -10,13 +10,16 @@ The next flaws involve tokens being tied to cookies, so it's important we unders
 
 One way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
 #### Token is tied to a non-session cookie
-However, if the web application has some behaviour that would allow the attacker to set a cookie on the victim's browser, the attacker doesn't need to read the victim's cookie. They can simply assign whatever token they please to the victim then use the same one in their CSRF page.
-#### Token is tied to a non-session cookie but server maintains record of tokens
-If the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then there exists an avenue for a CSRF attack.
+However, if the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then there exists an avenue for a CSRF attack.
 
+f the web application has some behaviour that would allow the attacker to set a cookie on the victim's browser, the attacker doesn't need to read the victim's cookie. They can simply assign whatever token they please to the victim then use the same one in their CSRF page.
 
 >**Note**
 >The cookie-setting behaviour doesn't even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the target application, if the cookie has suitable scope. For example, a cookie-setting function on `staging.demo.website.com` could be leverage to place a cookie submitted to `secure.website.com`.
+#### Token is tied to a non-session cookie but server maintains record of tokens
+If the server maintains a pool of valid tokens, we can borrow from the 
+
+
 
 ### Token is duplicated in a cookie
 In a further variation of the above, some applications do not maintain server-side records of tokens that have been issued, but instead duplicate each token within a cookie and a request parameter.
