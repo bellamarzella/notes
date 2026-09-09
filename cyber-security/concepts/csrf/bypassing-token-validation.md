@@ -9,7 +9,7 @@ Some applications do not validate the token belongs to the same session as the u
 The next flaws involve tokens being tied to cookies, so it's important we understand what this actually means. 
 One way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
 #### Token is tied to a non-session cookie
-If the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session-tracking
+If the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then therre 
 
 >**Note**
 >The cookie-setting behaviour doesn't even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the target application, if the cookie has suitable scope. For example, a cookie-setting function on `staging.demo.website.com` could be leverage to place a cookie submitted to `secure.website.com`.
