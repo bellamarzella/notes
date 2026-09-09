@@ -68,4 +68,4 @@ SameSite is a browser mechanism that determines when a website's cookies are inc
 Since 2021, Chrome enforces `Lax` SameSite restrictions by default. This is the proposed standard and it is likely that other major browsers will follow suit.
 
 #### Referrer-based validation
-
+Some applcations make use of the HTTP Referrer header to attempt to defend against CSRF attacks, normally by verifying that the request originated from the application's own domain. However, cookies can be manipulated, and this is genreally less effective that CSRF token validation.
