@@ -97,7 +97,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bypassing CSRF token validation.md",
+                "file": "concepts/csrf/Bypassing CSRF token validation.md",
                 "mode": "source",
                 "source": false
               },
@@ -284,10 +284,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "28d6cb47f28f1333",
+  "active": "7ed6e837e7a5ca65",
   "lastOpenFiles": [
     "concepts/csrf/csrf-basics.md",
-    "Bypassing CSRF token validation.md",
+    "concepts/csrf/Bypassing CSRF token validation.md",
     "concepts/csrf",
     "concepts/xss-types.md",
     "misc/unfinished.md",
