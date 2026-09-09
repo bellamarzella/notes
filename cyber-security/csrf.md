@@ -54,4 +54,6 @@ If the victim visits this webpage:
 Manually writing the HTML for a CSRF attack can be annoying, especially with many parameter,  but we can use tools like [CSRFShark](https://csrfshark.github.io/) to make it easier for us. Burp Suite professional also has a PoC generator, keyword being *professional*!  
 
 ### Delivering a CSRF attack
-The delivery mechanisms for a CSRF attack are essentially the same as for reflected XSS. Typically, the attacker places their malicious code on a website they control and then get a victim to 
+The delivery mechanisms for a CSRF attack are essentially the same as for reflected XSS. Typically, the attacker places their malicious code on a website they control and then get a victim to visit it. 
+
+Some simple CSRF exploits employ the GET method and can be fully self-contained within a single URL on the vulnerable website. In this situation, the attacker may not need to phish a victim, 
