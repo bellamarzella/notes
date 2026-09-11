@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/how-to-connect-htb.md",
+                "file": "misc/unfinished.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how-to-connect-htb"
+              "title": "unfinished"
             }
           }
         ]
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/how-to-connect-htb.md",
+                "file": "misc/unfinished.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -201,8 +201,9 @@
   },
   "active": "6c395a1660c0c5a7",
   "lastOpenFiles": [
-    "misc/unfinished.md",
     "misc/how-to-connect-htb.md",
+    "conflict-files-obsidian-git.md",
+    "misc/unfinished.md",
     "Untitled.canvas",
     "concepts/csrf/bypassing-token-validation.md",
     "concepts/csrf/csrf-basics.md",
