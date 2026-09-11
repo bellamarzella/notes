@@ -6,3 +6,5 @@
 Thumbs.db
 *.tmp
 *.log
+/cyber-security/.obsidian/workspace.json
+/cyber-security/.obsidian/plugins/obsidian-git/data.json

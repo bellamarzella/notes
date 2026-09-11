@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c17bb374c05b3cf4",
+        "id": "d49c093efb285582",
         "type": "tabs",
         "children": [
           {
-            "id": "6c395a1660c0c5a7",
+            "id": "c1f4e6f9b484d034",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "cyber-security/.obsidian/workspace.json",
+                "bFile": "cyber-security/.obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -176,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -194,16 +198,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0698c3f62b501129",
+  "active": "c1f4e6f9b484d034",
   "lastOpenFiles": [
+    "misc/unfinished.md",
+    "misc/how-to-connect-htb.md",
     "Untitled.canvas",
     "concepts/csrf/bypassing-token-validation.md",
     "concepts/csrf/csrf-basics.md",
     "concepts/csrf",
     "concepts/xss-types.md",
-    "misc/unfinished.md",
     "machines/nibbles.md",
-    "misc/how-to-connect-htb.md",
     "tools/gobuster.md",
     "concepts/ports.md",
     "concepts/privilege-escalation.md",
