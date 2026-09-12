@@ -5,14 +5,12 @@ Some applications will correctly validate the token, but only when the request u
 Some applications will correctly validate the token when it is present, but just skip it if it is omitted. In this situation, an attacker can remove the entire token parameter.
 ### Token is not tied to user session
 Some applications do not validate the token belongs to the same session as the user making the request. Instead, it maintains a global pool of issued tokens and accepts any token so along as it exists within this pool. The attacker can login with their own account, obtain a valid token and feed it to the victim.
-### Double-Submit Cookie Pattern
+### Naive Double-Submit Cookie Pattern
 The next flaws involve tokens being tied to cookies, so it's important we understand what this actually means. 
-#### Stateless/Naive
+
 One way to validate whether a CSRF token is valid is to issue a cookie holding the token to the user upon login. When that user makes a sensitive `POST` request, the token is copied to the request and is sent alongside the original cookie. The server then verifies that the two values match and responds accordingly. This relies on the assumption that cookies are stored client-side, so an attacker should have no way to read the cookie value and therefore cannot find the correct token to include in their payload.
 
-However, while cookies cannot be read by an attacker, **it is possible to for an attacker to inject  cookies**, which introduces a number of vulnerabilities.
- 
-If we want to avoid storing CSRF tokens on the database, one way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
+However, while cookies cannot be read by an attacker, **it is possible to for an attacker to inject  cookies**, which introduces vulnerabilities depending on the scenario:
 #### Token is tied to a non-session cookie
 However, if the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then there exists an avenue for a CSRF attack.
 
@@ -24,3 +22,7 @@ If the web application has some behaviour that would allow the attacker to set a
 >The cookie-setting behaviour doesn't even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the target application, if the cookie has suitable scope. For example, a cookie-setting function on `staging.demo.website.com` could be leverage to place a cookie submitted to `secure.website.com`.
 #### Token is tied to a non-session cookie but server maintains record of tokens
 If the server maintains a pool of valid tokens, then, as before, we can login to generate our own token, place a cookie on the victim's browser with our token, then include that same token in the CSRF payload.
+
+## The Gold Standard
+### Signed Double-Submit Cookie Pattern
+The solution to the above, and the standard protection against CSRF, is **Signed Double-Submit Cookie Pattern**. Here
