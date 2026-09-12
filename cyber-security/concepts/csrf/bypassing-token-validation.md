@@ -12,6 +12,8 @@ One way of validating a CSRF token is to issue a cookie holding it to the user w
 #### Token is tied to a non-session cookie
 However, if the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then there exists an avenue for a CSRF attack.
 
+In practice, this looks like a session cookie and a CSRF cookie, with a new cookie parameter to identify the CSRF cookie, something like `csrfKey`. 
+
 If the web application has some behaviour that would allow the attacker to set a cookie on the victim's browser, the attacker doesn't need to read the victim's cookie. They can simply assign whatever token they please to the victim then use the same one in their CSRF page.
 
 >**Note**
