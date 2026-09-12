@@ -5,10 +5,14 @@ Some applications will correctly validate the token, but only when the request u
 Some applications will correctly validate the token when it is present, but just skip it if it is omitted. In this situation, an attacker can remove the entire token parameter.
 ### Token is not tied to user session
 Some applications do not validate the token belongs to the same session as the user making the request. Instead, it maintains a global pool of issued tokens and accepts any token so along as it exists within this pool. The attacker can login with their own account, obtain a valid token and feed it to the victim.
-### Tokens & Cookies
+### Double-Submit Cookie Pattern
 The next flaws involve tokens being tied to cookies, so it's important we understand what this actually means. 
+#### Stateless/Naive
+One way to validate whether a CSRF token is valid is to issue a cookie holding the token to the user upon login. When that user makes a sensitive `POST` request, the token is copied to the request and is sent alongside the original cookie. The server then verifies that the two values match and responds accordingly. This relies on the assumption that cookies are stored client-side, so an attacker should have no way to read the cookie value and therefore cannot find the correct token to include in their payload.
 
-One way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
+However, while cookies cannot be read by an attacker, **it is possible to for an attacker to inject  cookies**, which introduces a number of vulnerabilities.
+ 
+If we want to avoid storing CSRF tokens on the database, one way of validating a CSRF token is to issue a cookie holding it to the user when the login, which is copied to any `POST` requests they make. The server then verifies that the cookie token and the request token match. This relies on the fact that cookies are stored client-side on the browser, so an attacker should have no way to get a victim's cookie and therefore their token.
 #### Token is tied to a non-session cookie
 However, if the application doesn't tie the token to the same cookie that tracks the session, usually because it employs two different frameworks for session tracking and CSRF tokens, then there exists an avenue for a CSRF attack.
 
