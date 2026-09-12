@@ -25,4 +25,6 @@ If the server maintains a pool of valid tokens, then, as before, we can login to
 
 ## The Gold Standard
 ### Signed Double-Submit Cookie Pattern
-The solution to the above, and the standard protection against CSRF, is **Signed Double-Submit Cookie Pattern**. Here
+The solution to the above, and the standard protection against CSRF, is **Signed Double-Submit Cookie Pattern**, which introduces **hashing**.
+
+When the user logs in, the server uses a secret key to hash a random CSRF token. The token and the resulting hash are then passed to the client via a cookie. The client extracts only the un-hashed token from the cookie and passes that in any requests. When the request gets back to the server, it hashes the token in the request and checks that it matches the hash in the cookie. Now, without knowing the hash, CSRF attacks are impossible.
