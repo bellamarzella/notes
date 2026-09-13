@@ -6,7 +6,8 @@ In this way, it is similar to [CSRF](obsidian://open?vault=cyber-security&file=c
 # Constructing a Basic Clickjacking Attack
 The attacker incorporates the target website, like your bank or social media, as an `iframe` layer on top of the decoy website. The decoy doesn't necessarily have anything to do with the target, but the point is that its structured in such lead the victim into performing some action on the underlaid legitimate website.
 
-For example:
+## Template
+
 ```html
 <head> 
 	<style> 
