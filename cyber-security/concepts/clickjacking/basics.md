@@ -64,4 +64,4 @@ An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`
 ```
 
 Of course, we need to `allow-forms` to submit forms. A lot of websites break without JavaScript, so we need to `allow-scripts`.
-However, if the 
+Equally, we can use these attributes to 
