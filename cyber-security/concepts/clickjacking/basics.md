@@ -41,4 +41,4 @@ The target website iframe is positioned within the browser so that there is a pr
 Creating a clickjacking POC tends to be tedious in practice, so we can use Burp's [Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) (which is included in community edition!) instead. This lets us use our browser to perform the desired actions on a frameable page, then generates a HTML file with a suitable clickjacking overlay, allowing us to generate a POC in seconds.
 
 # Clickjacking with prefilled form input
-Some website forms allow form inputs to be pre-populated via GET parameters prior to submissions. Other websites might require
+Some website forms allow form inputs to be pre-populated via GET parameters prior to submission (i.e., we don't need to trick the user into filling out the form, we just inject our own parameters into the request and get the victim to click the submit button). Others require actual  
