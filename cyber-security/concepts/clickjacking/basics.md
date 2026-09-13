@@ -38,4 +38,6 @@ For example:
 The target website iframe is positioned within the browser so that there is a precise overlap of the target action with the decoy website using appropriate width and height position values. Absolute and relative position values are used to ensure that the target website accurately overlaps the decoy regardless of screen size, browser type and platform. The z-index determines the stacking order of the iframe and website layers. The opacity value is defined as 0.0 (or close to 0.0) so that the iframe content is transparent to the user. Browser clickjacking protection might apply threshold-based iframe transparency detection (for example, Chrome version 76 includes this behavior but Firefox does not). The attacker selects opacity values so that the desired effect is achieved without triggering protection behaviours.
 
 ## Clickbandit
-Creating a clickjacking POC tends to be tedious in practice, so we can use Burp's [Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) (which is included in community edition!) instead. 
+Creating a clickjacking POC tends to be tedious in practice, so we can use Burp's [Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) (which is included in community edition!) instead. This lets us use our browser to perform the desired actions on a frameable page, then generates a HTML file with a suitable clickjacking overlay, allowing us to generate a POC in seconds.
+
+# Clickjacking with prefilled form input
