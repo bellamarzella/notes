@@ -23,6 +23,14 @@ The attacker incorporates the target website, like your bank or social media, as
 			z-index:1; 
 			} 
 	</style> 
-</head> ... <body> <div id="decoy_website"> ...decoy web content here... </div> <iframe id="target_website" src="https://vulnerable-website.com"> </iframe> </body>
+</head> 
+... 
+<body> 
+	<div id="decoy_website"> 
+	...decoy web content here... 
+	</div> 
+	<iframe id="target_website" src="https://vulnerable-website.com"> 
+	</iframe> 
+</body>
 ```
 
