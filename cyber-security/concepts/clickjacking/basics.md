@@ -39,6 +39,15 @@ The target website iframe is positioned within the browser so that there is a pr
 
 ## Clickbandit
 Creating a clickjacking POC tends to be tedious in practice, so we can use Burp's [Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) (which is included in community edition!) instead. This lets us use our browser to perform the desired actions on a frameable page, then generates a HTML file with a suitable clickjacking overlay, allowing us to generate a POC in seconds.
-
 # Clickjacking with prefilled form input
-Some website forms allow form inputs to be pre-populated via GET parameters prior to submission (i.e., we don't need to trick the user into filling out the form, the URL we use to redirect them populates the form for us and we just get the victim to click the submit button). Others require actual text, which we'll need to trick the user into filling out (unless the website is protected against it, but that's not in the current )
+Some website forms allow form inputs to be pre-populated via GET parameters prior to submission (i.e., we don't need to trick the user into filling out the form, the URL we use to redirect them populates the form for us and we just get the victim to click the submit button). Others require actual text, which we'll need to trick the user into filling out.
+
+# Frame busting
+Clickjacking is possible when a website can be framed. Therefore, preventative techniques are based on restricting this. A common client-side protection is to use **frame busting/breaking** scripts. These can be implemented via add-ons or extensions such as NoScript. Scripts are usually crafted so that they:
+
+- check and enforce the current application window is the main or top window
+- make all frames visible
+- prevent clicking on invisible frames
+- intercept and flag potential clickjacking attacks to the user
+
+Frame busting 
