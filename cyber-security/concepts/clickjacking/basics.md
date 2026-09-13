@@ -58,4 +58,3 @@ An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`
 <iframe id="victim_website" src="https://victim-website.com" sandbox="allow-forms"></iframe>
 ```
 
-These attributes, or there lacking, permit (or prevent) the specified actions within the `iframe`.
