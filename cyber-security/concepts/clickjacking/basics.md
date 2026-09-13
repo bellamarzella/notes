@@ -50,14 +50,22 @@ Clickjacking is possible when a website can be framed. Therefore, preventative t
 - prevent clicking on invisible frames
 - intercept and flag potential clickjacking attacks to the user
 
-Materially, they check whether the website is the main window, and if they aren't, they attempt some action to defend themselves, such as:
+Materially, they check whether the website is the main window, and if they aren't, they attempt some action to defend themselves:
 
-- redirecting the top (clickjacking) window to the legitimate site
-- disabling the website entirely by hiding the content with CSS
+```js
+if (top !== self) { 
+	// A simple framebuster. If the webpage isn't on top, redirect the top page to        itself. This is vulnerable as we'll see.
+	top.location = self.location; 
+}
+if (top === self) { 
+	// A more sophisticated technique. If the webpage isn't on top, make                  everything invisible, rendering the website unusable. An attacker would            have to disable scripts on the frame to circumvent this, which would likely        render the site, and by extension the attack, unusable.
+	document.body.style.display = 'block'; 
+}
+```
 
 Due to the flexibility of HTML, these can still be circumvented, and, because they are JavaScript, the browser's security settings may prevent their operation or the browser might just not support JavaScript in the first place.
 
-An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`** attribute. When this is set with the `allow-forms` or `allow-scripts` values and `allow-top-navigation` is omitted, the frame buster cannot check whether the `iframe` is the top window, neutralising it.
+An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`** attribute. When this is set with the `allow-forms` or `allow-scripts` values and `allow-top-navigation` is omitted, a naive frame buster cannot react when a website is framed. In order to 
 
 ```html
 <iframe id="victim_website" src="https://victim-website.com" sandbox="allow-forms"></iframe>
