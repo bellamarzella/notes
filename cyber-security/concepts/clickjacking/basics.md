@@ -65,11 +65,8 @@ if (top === self) {
 
 Due to the flexibility of HTML, these can still be circumvented, and, because they are JavaScript, the browser's security settings may prevent their operation or the browser might just not support JavaScript in the first place.
 
-An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`** attribute. When this is set with the `allow-forms` or `allow-scripts` values and `allow-top-navigation` is omitted, a naive frame buster cannot react when a website is framed. In order to 
-
-```html
-<iframe id="victim_website" src="https://victim-website.com" sandbox="allow-forms"></iframe>
-```
-
-Of course, we need to `allow-forms` to submit forms. A lot of websites break without JavaScript, so we need to `allow-scripts`.
-Equally, we can use these attributes to 
+An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`** attribute. When this is set with the `allow-forms` or `allow-scripts` values and `allow-top-navigation` is omitted, our first frame buster cannot react. It sees that it isn't the top frame and tries to redirect, but isn't allowed to because of `allow-top-navigation`'s absence.
+# Combining clickjacking with DOM XSS 
+The true potency of clickjacking is revealed when it is used as a vector for another attack, such as [[xss-types#DOM-based XSS |DOM-based XSS]]. Implementation of this is usually simple provided the attacker has identified the XSS exploit. This is combined with the `iframe` target so that the user clicks on something that then executes the XSS attack.
+# Multistep Clickjacking
+If desired attack necessitates multiple actions, such as placing an item into a shopping basket then checking out, the attacker may use multiple `<div>` tags or iframes. These attacks require considerable precision and care from the attacker if they are to be effective and stealthy.
