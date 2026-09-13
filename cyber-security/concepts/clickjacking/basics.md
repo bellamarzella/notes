@@ -50,4 +50,12 @@ Clickjacking is possible when a website can be framed. Therefore, preventative t
 - prevent clicking on invisible frames
 - intercept and flag potential clickjacking attacks to the user
 
-Frame busting 
+Due to the flexibility of HTML, frame busters can usually still be circumvented, and, because they are JavaScript the browser's security settings may prevent their operation or the browser might just not support JavaScript in the first place.
+
+An effective **workaround** for attackers is to use the **HTML5 iframe `sandbox`** attribute. When this is set with the `allow-forms` or `allow-scripts` values and `allow-top-navigation` is omitted, the frame buster cannot check whether the `iframe` is the top window, neutralising it.
+
+```html
+<iframe id="victim_website" src="https://victim-website.com" sandbox="allow-forms"></iframe>
+```
+
+These attributes, or there lacking, permit (or prevent) the specified actions within the `iframe`.
