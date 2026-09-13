@@ -4,5 +4,5 @@ Clickjacking is a type of **UI redressing** attack. An attacker sets up a webpag
 In this way, it is similar to [CSRF](obsidian://open?vault=cyber-security&file=concepts%2Fcsrf%2Fbasics) attacks, in that the goal is to get a user to execute an unintended action, but where CSRF forces the victim to do it without their knowledge, clickjacking tricks them into doing it themselves. Because these actions occur on the actual domain, CSRF tokens are placed into requests and passed to the server as they would in any normal session.
 
 # Constructing a Basic Clickjacking Attack
-The attacker incorporates the target website, like your bank or social media, as an `iframe` layer on top of the decoy website. The decoy doesn't necessarily have anything to do with the target, it could just be a 
+The attacker incorporates the target website, like your bank or social media, as an `iframe` layer on top of the decoy website. The decoy doesn't necessarily have anything to do with the target, but the point is that its structured in such lead the victim into performing some action on the underlaid 
 
