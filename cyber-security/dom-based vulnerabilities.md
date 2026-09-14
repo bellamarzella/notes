@@ -49,4 +49,6 @@ Database
 The following kinds of data can also be used as sources to exploit taint-flow vulnerabilities:
 
 - [[xss-types#Reflected XSS (Non-Persistent)|Reflected Data]]
-- 
+- [[xss-types#Stored XSS|Stored Data]]
+- Web Messages (*no notes yet*)
+
