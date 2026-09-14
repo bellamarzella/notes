@@ -1,11 +1,8 @@
-# What is the DOM?
-The Document Object Model is a browser's hierarchical representation of the elements on the page. Websites can use JavaScript to manipulate the nodes and objects of the DOM, as well as their properties. The ability to manipulate the DOM isn't a problem in and of itself, in fact, it's integral to how modern websites work. However, JavaScript that handles data insecurely can enable various attacks.
-# Taint-flow vulnerabilities
 Many DOM-based vulnerabilities can be traced back to problems with the way client-side code manipulates attacker-controllable data.
-## What is taint flow?
-### Sources
+# What is taint flow?
+## Sources
 A source is a JS property that can **accept data that could be attacker controlled**. For example, `location.search` reads input from the query string, which is simple for an attacker to control. Ultimately, any property that can be controlled by the attacker is a potential source. Some other examples include the referring URL (`document.referrer`), the user's cookies (`document.cookie`) and web messages.
-### Sinks
+## Sinks
 A sink is a potentially dangerous JS function on DOM object that can **cause undesirable effects if attacker-controlled data is passed to it.** For example, the `eval()` function is a JS sink because it processes the argument passed to it as JS. `document.body.innerHTML` is a HTML sink because it potentially allows attackers to inject malicious HTML and execute arbitrary JS code.
 
 
@@ -26,7 +23,7 @@ This is vulnerable because `location.hash` is a source that is handled unsafely.
 https://www.innocent-website.com/example#https://www.evil-user.net
 ```
 
-### Common Sources
+## Common Sources
 The following are typical sources that can be used to exploit a variety of taint-flow vulnerabilities:
 
 ```
@@ -52,7 +49,7 @@ The following kinds of data can also be used as sources to exploit taint-flow vu
 - [[xss-types#Stored XSS|Stored Data]]
 - Web Messages (*no notes yet*)
 
-### Common Sinks
+## Common Sinks
 A list of common DOM-based vulnerabilities and an example of a sink that can lead to each one:
 
 | Dom-based vulnerability                                                                                             | Example Sink               |
@@ -74,10 +71,7 @@ A list of common DOM-based vulnerabilities and an example of a sink that can lea
 | [DOM-data manipulation](https://portswigger.net/web-security/dom-based/dom-data-manipulation)                       | `element.setAttribute()`   |
 | [Denial of service](https://portswigger.net/web-security/dom-based/denial-of-service)                               |                            |
 
-## Preventing DOM-based taint-flow vulnerabilities
+# Preventing DOM-based taint-flow vulnerabilities
 There's no single action that can eliminate the threat entirely, however, generally, the most effective way to avoid these attacks is to avoid allowing data from any untrusted source to dynamically alter any value transmitted to any sink.
 
 If the desired functionality of an application makes this unavoidable, then defences must be implemented within the client-side code. In many cases, the relevant data can validated via a whitelist, only allowing data that is known to be safe. In other cases, it's necessary to sanitise or encode data. This can be complex, and depending on the context, may involve a combination of JS escaping, HTML encoding and URL encoding, appropriately ordered.
-
-# DOM clobbering
-This is an advanced technique in which you inject HTML into a page to manipulate the DOM and ultimately change the behaviour of JS on the website. The most common form of DOM clobbering uses an anchor element to overwrite a global variable, which is then used by the application in an unsafe way, such as generating a dynamic script URL.

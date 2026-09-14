@@ -1,0 +1,1 @@
+This is an advanced technique in which you inject HTML into a page to manipulate the DOM and ultimately change the behaviour of JS on the website. The most common form of DOM clobbering uses an anchor element to overwrite a global variable, which is then used by the application in an unsafe way, such as generating a dynamic script URL.
