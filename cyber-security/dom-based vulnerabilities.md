@@ -52,3 +52,4 @@ The following kinds of data can also be used as sources to exploit taint-flow vu
 - [[xss-types#Stored XSS|Stored Data]]
 - Web Messages (*no notes yet*)
 
+### Common Sunks
