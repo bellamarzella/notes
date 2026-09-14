@@ -20,4 +20,33 @@ if (goto.startsWith('https:')) {   
 }
 ```
 
-This is vulnerable because `location.hash` is a source that is handled unsafely. 
+This is vulnerable because `location.hash` is a source that is handled unsafely. If the URL contains a hash fragment beginning with `https:`, the code will extract that and set it as the `location` property of the `window`. An attacker can exploit this to redirect a victim to a website of their choosing:
+
+```url
+https://www.innocent-website.com/example#https://www.evil-user.net
+```
+
+### Common Sources
+The following are typical sources that can be used to exploit a variety of taint-flow vulnerabilities:
+
+```
+document.URL
+document.documentURI
+document.URLUnencoded
+document.baseURI
+location
+document.cookie
+document.referrer
+window.name
+history.pushState
+history.replaceState
+localStorage
+sessionStorage
+IndexedDB (mozIndexedDB, webkitIndexedDB, msIndexedDB)
+Database
+```
+
+The following kinds of data can also be used as sources to exploit taint-flow vulnerabilities:
+
+- [[xss-types#Reflected XSS (Non-Persistent)|Reflected Data]]
+- 
