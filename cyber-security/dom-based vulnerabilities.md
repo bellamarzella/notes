@@ -75,4 +75,9 @@ A list of common DOM-based vulnerabilities and an example of a sink that can lea
 | [Denial of service](https://portswigger.net/web-security/dom-based/denial-of-service)                               |                            |
 
 ## Preventing DOM-based taint-flow vulnerabilities
-There's no single action
+There's no single action that can eliminate the threat entirely, however, generally, the most effective way to avoid these attacks is to avoid allowing data from any untrusted source to dynamically alter any value transmitted to any sink.
+
+If the desired functionality of an application makes this unavoidable, then defences must be implemented within the client-side code. In many cases, the relevant data can validated via a whitelist, only allowing data that is known to be safe. In other cases, it's necessary to sanitise or encode data. This can be complex, and depending on the context, may involve a combination of JS escaping, HTML encoding and URL encoding, appropriately ordered.
+
+# DOM clobbering
+This is an advanced technique in which you inject HTML into a page to manipulate the DOM and ultimately change the behaviour of JS on the website. The most common for of DOM clbb
