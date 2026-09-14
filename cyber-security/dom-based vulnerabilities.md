@@ -20,4 +20,4 @@ if (goto.startsWith('https:')) {   
 }
 ```
 
-This is vulnerable because `location.hash` is a source handled unsafely.
+This is vulnerable because `location.hash` is a source that is handled unsafely. 
