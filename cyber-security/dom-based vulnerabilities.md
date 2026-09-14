@@ -6,3 +6,8 @@ DOM-based vulnerabilities arise when the websites contains JS that takes an **at
 # Taint-flow vulnerabilities
 Many DOM-based vulnerabilities can be traced back to problems with the way client-side code manipulates attacker-controllable data.
 ## What is taint flow?
+### Sources
+A source is a JS property that can **accept data that could be attacker controlled**. For example, `location.search` reads input from the query string, which is simple for an attacker to control. Ultimately, any property that can be controlled by the attacker is a potential source. Some other examples include the referring URL (`document.referrer`), the user's cookies (`document.cookie`) and web messages.
+### Sinks
+A sink is a potentially dangerous JS function on DOM object that can **cause undesirable effects if attacker-controlled data is passed to it.** For example, the `eval()` function is a JS sink because it processes the argument passed to it as JS. `document.body.innerHTML` is a HTML sink because it potentially allows attackers to inject malicious HTML and execute arbitrary JS code.
+
