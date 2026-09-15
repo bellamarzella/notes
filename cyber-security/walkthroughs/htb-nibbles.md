@@ -113,4 +113,5 @@ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)
 ```
 
 Nice! We've gained RCE on the webserver, and the Apache server is running in the `nibbler` user context. Now let's modify the `php` to obtain a shell.
+See [[/](obsidian://open?vault=cyber-security&file=concepts%2Fshells)]
 
