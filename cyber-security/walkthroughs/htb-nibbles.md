@@ -114,5 +114,8 @@ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)
 
 Nice! We've gained RCE on the webserver, and the Apache server is running in the `nibbler` user context. Now let's modify the `php` to obtain a reverse shell, then upgrade it to a TTY. See [[shells#Reverse Shell |shells]] for how we can do this.
 
+Once we've achieved this, we can navigate to `/home/nibbler` and run `cat user.txt` to find a flag.
 
+## Privilege Escalation
+We now have an upgraded reverse shell! Let's try to escalate things.
 
