@@ -106,4 +106,6 @@ So, we've logged in as an admin and we know that a RCE vulnerability exists. Bef
 
 If you're familiar at all with common web exploits, there's a lot that looks intriguing here. Let's focus on the *My Image* plugin. This lets admins upload images that can be selected from when posting to the blog. However, as you might suspect, there seems to be no controls on what type of file we upload. Trying an empty `test.php`, for example, throws a bunch of errors, but still says that the upload was successful. If we navigate to `http://10.129.212.52/nibbleblog/content/private/plugins/my_image/`, we'll see a new `image.php` file has appeared. 
 
-Lets alter 
+Lets alter our `php` file to run the `id` command: `<?php system('id'); ?>`. Uploading this new file overwrites the previous one, and this time opening it shows the following:
+
+
