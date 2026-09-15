@@ -108,4 +108,8 @@ If you're familiar at all with common web exploits, there's a lot that looks int
 
 Lets alter our `php` file to run the `id` command: `<?php system('id'); ?>`. Uploading this new file overwrites the previous one, and this time opening it shows the following:
 
+```html
+uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)
+```
 
+Nice! We've gained RCE on the webserver, and the Apache server is running in the `nibbler` user context. Let's
