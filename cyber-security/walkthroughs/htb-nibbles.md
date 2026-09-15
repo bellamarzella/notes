@@ -117,5 +117,7 @@ Nice! We've gained RCE on the webserver, and the Apache server is running in the
 Once we've achieved this, we can navigate to `/home/nibbler` and run `cat user.txt` to find a flag.
 
 ## Privilege Escalation
-We now have an upgraded reverse shell! Let's try to escalate things.
+We now have an upgraded reverse shell! Let's try to escalate things. Again, see [[privilege-escalation]] for more detail on how we can do this. 
+
+We'll begin with more enumeration. We'll need to find something to exploit to find escalate our privileges! 
 
