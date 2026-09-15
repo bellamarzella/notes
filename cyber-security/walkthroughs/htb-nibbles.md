@@ -102,4 +102,7 @@ We've reached a bit of a dead-end here. The solution is to use a little creative
 
 >**Note:** We can use a tool such as [CeWL](https://github.com/digininja/CeWL) to crawl a webpage and generate a custom word-list if we want to be a bit more clever about doing this.
 ### Admin Enumeration
-So, we've logged in as an admin and we know that a RCE vulnerability exists. Before we begin exploiting, lets poke around here and see if anything else might show up.****
+So, we've logged in as an admin and we know that a RCE vulnerability exists. Before we begin exploiting, lets poke around here and see if anything else might show up.
+
+If you're familiar at all with common web exploits, the ability to publish an image alongside any post immediately looks appealing. Let's see if this lets us smuggle a `.php` onto the server.
+
